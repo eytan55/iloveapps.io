@@ -214,8 +214,8 @@ section {
   padding: var(--spacing-xl) 0;
 }
 
-/* Laptop optimization */
-@media (max-height: 800px) and (min-width: 769px) {
+/* Laptop optimization - only for smaller screens */
+@media (max-height: 800px) and (min-width: 769px) and (max-width: 1200px) {
   .hero {
     min-height: 96vh;
     padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
@@ -584,13 +584,13 @@ section {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-md) 0;
 }
 
 .demo-content h3 {
   color: var(--text-primary);
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
   font-weight: 700;
 }
 
@@ -1743,22 +1743,22 @@ section {
 /* === RESPONSIVE DESIGN === */
 
 /* Laptop/Small Desktop Optimization */
-@media (max-width: 1200px) and (min-width: 769px) {
+@media (max-width: 1800px) and (min-width: 769px) {
   .hero .container {
     gap: var(--spacing-xl);
   }
   
   .phone-mockup {
-    width: 260px;
-    height: 520px;
+    width: 320px;
+    height: 620px;
   }
 }
 
-/* Laptop height optimization */
-@media (max-height: 800px) and (min-width: 769px) {
+/* Laptop height optimization - only for smaller screens */
+@media (max-height: 800px) and (min-width: 769px) and (max-width: 1200px) {
   .phone-mockup {
-    width: 240px;
-    height: 480px;
+    width: 300px;
+    height: 580px;
   }
   
   .hero .container {
@@ -1775,6 +1775,11 @@ section {
   
   .hero .container {
     gap: var(--spacing-md);
+  }
+  
+  .phone-mockup {
+    width: 280px;
+    height: 560px;
   }
   
   .badge {
