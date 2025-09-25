@@ -415,6 +415,11 @@ body {
     animation: floatApp 6s ease-in-out infinite;
 }
 
+.hero-app-popday {
+    animation: floatApp 6s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
 .hero-app-myrecipe {
     animation: floatApp 6s ease-in-out infinite;
     animation-delay: 3s;
@@ -530,6 +535,10 @@ body {
 
 .app-textlater .app-background-glow {
     background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+}
+
+.app-popday .app-background-glow {
+    background: radial-gradient(circle at 50% 0%, rgba(120, 108, 227, 0.05) 0%, transparent 70%);
 }
 
 .app-myrecipe .app-background-glow {
