@@ -1,1 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextBirthday - Never Miss a Birthday Again | iOS App</title>
+    <meta name="description" content="NextBirthday is the ultimate iOS app for managing birthdays and creating personalized cards. 100% private, no accounts required. Free version with 10 birthdays + 2 cards, Premium with unlimited features.">
+    <meta name="keywords" content="NextBirthday, PopDay, iOS app, birthday management, personalized cards, iPhone, iPad, reminders, notifications, privacy, native app, SwiftUI">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="NextBirthday - Never Miss a Birthday Again">
+    <meta property="og:description" content="The ultimate iOS app for managing birthdays and creating personalized cards. 100% private, no accounts required. Free version available with Premium features.">
+    <meta property="og:image" content="https://textlater.app/popday/assets/images/nextbirthday-og.png">
+    <meta property="og:url" content="https://textlater.app/popday/">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-68ZN528Z5W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-68ZN528Z5W');
+    </script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i data-lucide="calendar"></i>
+                    <span>Never Miss a Birthday Again</span>
+                </div>
+                <h1 class="hero-heading">
+                    <span class="hero-brand">NextBirthday</span><br>
+                    Never Miss a Birthday<br>
+                    <span class="hero-highlight">Again</span>
+                </h1>
+                <p class="hero-description">
+                    The ultimate iOS app for managing birthdays and creating stunning personalized cards. 
+                    <strong>100% local, private, and secure</strong> - no accounts, no tracking, no data collection. 
+                    Start with our generous free version, upgrade to Premium for unlimited features.
+                </p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i data-lucide="smartphone"></i>
+                        <span>Native iOS App</span>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="shield-check"></i>
+                        <span>100% Private</span>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="bell"></i>
+                        <span>Smart Notifications</span>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="palette"></i>
+                        <span>Custom Cards</span>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="users"></i>
+                        <span>Import Contacts</span>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="gift"></i>
+                        <span>Free Version</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#features" class="hero-button hero-button-primary">
+                        <i data-lucide="sparkles"></i>
+                        Explore Features
+                    </a>
+                    <a href="#pricing" class="hero-button hero-button-secondary">
+                        <i data-lucide="crown"></i>
+                        View Pricing
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-graphics">
+                    <div class="floating-card card-1">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <i data-lucide="cake"></i>
+                            </div>
+                            <div class="card-text">Birthday</div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <i data-lucide="palette"></i>
+                            </div>
+                            <div class="card-text">Custom</div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="card-text">Cards</div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-4">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <i data-lucide="bell"></i>
+                            </div>
+                            <div class="card-text">Alerts</div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-5">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <i data-lucide="heart"></i>
+                            </div>
+                            <div class="card-text">Love</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-app-icon">
+                    <img src="../assets/images/Icon-popday.png" alt="PopDay App Icon" class="app-icon-large">
+                    <div class="icon-glow"></div>
+                    <div class="icon-particles">
+                        <div class="particle particle-1"></div>
+                        <div class="particle particle-2"></div>
+                        <div class="particle particle-3"></div>
+                        <div class="particle particle-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-container">
+            <div class="features-header">
+                <h2 class="features-title">Complete Birthday Management Solution</h2>
+                <p class="features-subtitle">
+                    Everything you need to never miss a birthday again. Native iOS app with powerful features and beautiful card creation.
+                </p>
+            </div>
+            
+            <!-- Core Features Overview -->
+            <div class="core-features">
+                <div class="core-feature">
+                    <div class="core-feature-icon">
+                        <i data-lucide="calendar"></i>
+                    </div>
+                    <h3>Smart Birthday Management</h3>
+                    <p>Advanced birthday reminders with customizable timing and personalized notification settings</p>
+                </div>
+                <div class="core-feature">
+                    <div class="core-feature-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>Beautiful Card Creation</h3>
+                    <p>Create stunning personalized cards with templates, custom colors, and advanced editing</p>
+                </div>
+                <div class="core-feature">
+                    <div class="core-feature-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3>100% Private & Secure</h3>
+                    <p>All data stays on your device. No accounts, no tracking, no data collection</p>
+                </div>
+                <div class="core-feature">
+                    <div class="core-feature-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>Easy Import</h3>
+                    <p>Import birthdays from iOS Contacts with just a few taps</p>
+                </div>
+                <div class="core-feature">
+                    <div class="core-feature-icon">
+                        <i data-lucide="image"></i>
+                    </div>
+                    <h3>Rich Decorations</h3>
+                    <p>Access to backgrounds, GIFs, and decorative elements to personalize your cards</p>
+                </div>
+                <div class="core-feature">
+                    <div class="core-feature-icon">
+                        <i data-lucide="download"></i>
+                    </div>
+                    <h3>Multiple Export Options</h3>
+                    <p>Export in PNG, JPG, PDF with Standard, HD, and Ultra HD quality options</p>
+                </div>
+            </div>
+            
+            <!-- Detailed Comparison -->
+            <div class="comparison-section">
+                <h3 class="comparison-title">Free vs Premium Comparison</h3>
+                
+                <!-- Desktop Table -->
+                <div class="comparison-table desktop-only">
+                    <div class="comparison-header">
+                        <div class="feature-column">
+                            <i data-lucide="settings"></i>
+                            <span>Feature</span>
+                        </div>
+                        <div class="free-column">
+                            <i data-lucide="gift"></i>
+                            <span>Free</span>
+                        </div>
+                        <div class="premium-column">
+                            <i data-lucide="crown"></i>
+                            <span>Premium</span>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">
+                            <i data-lucide="gift"></i>
+                            <span>Birthday Management</span>
+                        </div>
+                        <div class="free-value">Up to 10 birthdays</div>
+                        <div class="premium-value">Unlimited birthdays</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">
+                            <i data-lucide="palette"></i>
+                            <span>Card Creation</span>
+                        </div>
+                        <div class="free-value">2 cards total</div>
+                        <div class="premium-value">Unlimited cards</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">
+                            <i data-lucide="file-text"></i>
+                            <span>Templates</span>
+                        </div>
+                        <div class="free-value">3 free templates</div>
+                        <div class="premium-value">All templates</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">
+                            <i data-lucide="bell"></i>
+                            <span>Notifications</span>
+                        </div>
+                        <div class="free-value">1 day before (9 AM)</div>
+                        <div class="premium-value">Custom timing (7d, 3d, 1d + custom hour)</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">
+                            <i data-lucide="download"></i>
+                            <span>Export Quality</span>
+                        </div>
+                        <div class="free-value">Standard (720p)</div>
+                        <div class="premium-value">HD (1920p) & Ultra HD (4K)</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">
+                            <i data-lucide="file-text"></i>
+                            <span>Export Formats</span>
+                        </div>
+                        <div class="free-value">PNG, JPG</div>
+                        <div class="premium-value">PNG, JPG, PDF</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">
+                            <i data-lucide="paintbrush"></i>
+                            <span>Customization</span>
+                        </div>
+                        <div class="free-value">6 colors, 5 fonts, basic tools</div>
+                        <div class="premium-value">14 colors, 13 fonts, backgrounds, decorations</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">
+                            <i data-lucide="image"></i>
+                            <span>Decorations</span>
+                        </div>
+                        <div class="free-value">❌</div>
+                        <div class="premium-value">✅ Backgrounds, GIFs, Stickers</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">
+                            <i data-lucide="clock"></i>
+                            <span>Card History</span>
+                        </div>
+                        <div class="free-value">✅ Complete history</div>
+                        <div class="premium-value">✅ Complete history</div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Cards -->
+                <div class="comparison-mobile mobile-only">
+                    <div class="comparison-mobile-card">
+                        <div class="mobile-card-header">
+                            <h4>Free Version</h4>
+                            <div class="mobile-card-badge free">Free</div>
+                        </div>
+                        <div class="mobile-features">
+                            <div class="mobile-feature">
+                                <i data-lucide="gift"></i>
+                                <span>Up to 10 birthdays</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="users"></i>
+                                <span>Import from iOS Contacts</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="bell"></i>
+                                <span>Basic notifications (1 day before)</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="palette"></i>
+                                <span>2 cards total</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="file-text"></i>
+                                <span>3 free templates</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="paintbrush"></i>
+                                <span>Basic customization</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="download"></i>
+                                <span>Standard quality exports</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="clock"></i>
+                                <span>Card history</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="share"></i>
+                                <span>iOS sharing integration</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-mobile-card premium">
+                        <div class="mobile-card-header">
+                            <h4>Premium Version</h4>
+                            <div class="mobile-card-badge premium">Premium</div>
+                        </div>
+                        <div class="mobile-features">
+                            <div class="mobile-feature">
+                                <i data-lucide="gift"></i>
+                                <span>Unlimited birthdays</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="bell"></i>
+                                <span>Advanced notifications (custom timing)</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="file-text"></i>
+                                <span>All premium templates</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="palette"></i>
+                                <span>Unlimited cards</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="paintbrush"></i>
+                                <span>Advanced customization & decorations</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="download"></i>
+                                <span>HD & Ultra HD exports</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="file-text"></i>
+                                <span>PDF export for printing</span>
+                            </div>
+                            <div class="mobile-feature">
+                                <i data-lucide="clock"></i>
+                                <span>Card history tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-container">
+            <div class="pricing-header">
+                <h2 class="pricing-title">Simple, Transparent Pricing</h2>
+                <p class="pricing-subtitle">
+                    Start free, upgrade when you need more. No hidden fees, no surprises.
+                </p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card pricing-free">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Free</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">€</span>
+                            <span class="price-amount">0</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="pricing-description">Perfect for getting started</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul class="pricing-list">
+                            <li><i data-lucide="check"></i> Up to 10 birthdays</li>
+                            <li><i data-lucide="check"></i> Import from iOS Contacts</li>
+                            <li><i data-lucide="check"></i> 2 cards total</li>
+                            <li><i data-lucide="check"></i> 3 free templates</li>
+                            <li><i data-lucide="check"></i> Basic notifications</li>
+                            <li><i data-lucide="check"></i> Standard quality exports</li>
+                            <li><i data-lucide="check"></i> iOS sharing integration</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="#" class="btn btn-secondary">Start Free</a>
+                    </div>
+                </div>
+
+                <div class="pricing-card pricing-premium">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Premium Monthly</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">€</span>
+                            <span class="price-amount">1.99</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="pricing-description">Unlock everything</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul class="pricing-list">
+                            <li><i data-lucide="check"></i> Unlimited birthdays</li>
+                            <li><i data-lucide="check"></i> Advanced notifications</li>
+                            <li><i data-lucide="check"></i> All premium templates</li>
+                            <li><i data-lucide="check"></i> Unlimited cards</li>
+                            <li><i data-lucide="check"></i> HD & Ultra HD exports</li>
+                            <li><i data-lucide="check"></i> PDF export</li>
+                            <li><i data-lucide="check"></i> Card history</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="#" class="btn btn-primary">Try Premium</a>
+                    </div>
+                </div>
+
+                <div class="pricing-card pricing-annual">
+                    <div class="pricing-badge">Best Value</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Premium Annual</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">€</span>
+                            <span class="price-amount">14.99</span>
+                            <span class="price-period">/year</span>
+                        </div>
+                        <div class="pricing-savings">
+                            <span class="savings-text">Save 37%</span>
+                            <span class="savings-amount">€8.89/year</span>
+                        </div>
+                        <p class="pricing-description">Same features, better value</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul class="pricing-list">
+                            <li><i data-lucide="check"></i> Everything in Monthly</li>
+                            <li><i data-lucide="check"></i> 37% savings</li>
+                            <li><i data-lucide="check"></i> One payment per year</li>
+                            <li><i data-lucide="check"></i> Cancel anytime</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="#" class="btn btn-primary">Get Annual</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to never miss a birthday again?</h2>
+            <p class="cta-description">
+                Download NextBirthday now and create personalized cards for your loved ones
+            </p>
+            <div class="cta-actions">
+                <a href="#" class="cta-button cta-button-primary">
+                    <i data-lucide="download"></i>
+                    Download on App Store
+                </a>
+                <a href="https://discord.gg/UhutX6ju6h" class="cta-button cta-button-secondary" target="_blank">
+                    <img src="../assets/images/discord.png" alt="Discord" class="discord-icon">
+                    Join Discord
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>NextBirthday</h3>
+                    <p>Never Miss a Birthday Again</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>App</h4>
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#">Download</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <a href="https://discord.gg/UhutX6ju6h" target="_blank">Discord</a>
+                        <a href="https://twitter.com/iloveappsio" target="_blank">Twitter</a>
+                        <a href="https://iloveapps.io" target="_blank">I Love Apps</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="https://eytan55.github.io/textlater.github.io/privacy-policy-en.html" target="_blank">Privacy Policy</a>
+                        <a href="https://twitter.com/iloveappsio" target="_blank">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 I Love Apps. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "NextBirthday",
+        "url": "https://textlater.app/popday/",
+        "description": "The ultimate iOS app for managing birthdays and creating personalized cards. 100% private, no accounts required.",
+        "operatingSystem": "iOS",
+        "applicationCategory": "LifestyleApplication",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Free Version",
+                "price": "0",
+                "priceCurrency": "EUR",
+                "description": "Up to 10 birthdays, 2 cards, basic features"
+            },
+            {
+                "@type": "Offer",
+                "name": "Premium Monthly",
+                "price": "1.99",
+                "priceCurrency": "EUR",
+                "description": "Unlimited birthdays, cards, and premium features"
+            },
+            {
+                "@type": "Offer",
+                "name": "Premium Annual",
+                "price": "14.99",
+                "priceCurrency": "EUR",
+                "description": "Unlimited features with 37% savings"
+            }
+        ],
+        "featureList": [
+            "Birthday management",
+            "Personalized card creation",
+            "iOS Contacts import",
+            "Smart notifications",
+            "Rich decorations",
+            "Multiple export formats",
+            "Manual backup",
+            "Privacy-focused design"
+        ]
+    }
+    </script>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
 
