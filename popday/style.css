@@ -1259,6 +1259,11 @@ body {
     box-shadow: var(--shadow-xl), var(--shadow-purple);
 }
 
+.btn-large {
+    padding: 18px 36px;
+    font-size: 18px;
+}
+
 .btn-secondary {
     background: var(--glass-bg);
     backdrop-filter: var(--glass-backdrop);

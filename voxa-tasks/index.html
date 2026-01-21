@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voxa Tasks - Free Your Mind From Mental Overload | Voice Task Manager for iOS</title>
+    <meta name="description" content="Stop trying to remember everything. Capture tasks naturally with your voice. Voxa instantly turns your words into organized tasks. No typing. No mental juggling.">
+    <meta name="keywords" content="voice task manager, iOS app, voice control, AI task manager, Apple Intelligence, hands-free productivity, mental load, GTD">
+    
+    <link rel="canonical" href="https://iloveapps.io/voxa-tasks/">
+    <link rel="alternate" hreflang="en" href="https://iloveapps.io/voxa-tasks/">
+    <link rel="alternate" hreflang="fr" href="https://iloveapps.io/voxa-tasks/fr/">
+    <link rel="alternate" hreflang="x-default" href="https://iloveapps.io/voxa-tasks/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Voxa Tasks - Free Your Mind From Mental Overload">
+    <meta property="og:description" content="Capture tasks naturally with your voice. Let Voxa remember for you.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iloveapps.io/voxa-tasks/">
+    <meta property="og:image" content="https://iloveapps.io/assets/images/voxa-tasks-og.png">
+    <meta property="og:site_name" content="iloveapps.io">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@iloveappsio">
+    <meta name="twitter:title" content="Voxa Tasks - Voice Task Manager">
+    <meta name="twitter:description" content="Capture tasks by voice. Let Voxa remember for you.">
+    <meta name="twitter:image" content="https://iloveapps.io/assets/images/voxa-tasks-og.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-68ZN528Z5W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-68ZN528Z5W');
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="float-element" data-speed="2">
+                <i data-lucide="mic" class="float-icon"></i>
+            </div>
+            <div class="float-element" data-speed="3">
+                <i data-lucide="check-circle" class="float-icon"></i>
+            </div>
+            <div class="float-element" data-speed="1.5">
+                <i data-lucide="brain" class="float-icon"></i>
+            </div>
+            <div class="float-element" data-speed="2.5">
+                <i data-lucide="sparkles" class="float-icon"></i>
+            </div>
+            <div class="float-element" data-speed="1.8">
+                <i data-lucide="cloud" class="float-icon"></i>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <!-- Main Headline -->
+                <h1 class="hero-title">
+                    <span class="brand-name">Voxa Tasks</span>
+                    Free Your Mind From
+                    <span class="gradient-text">Mental Overload</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    <strong>Stop trying to remember everything.</strong> Capture what's on your mind naturally using your voice. Just say what you need to do, and Voxa instantly turns your words into organized tasks. <em>No typing. No mental juggling.</em>
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="cta-buttons">
+                    <a href="https://apps.apple.com/us/app/voxa-tasks/id6757767053" class="btn-primary" id="main-cta" target="_blank">
+                        <i data-lucide="smartphone" class="btn-icon"></i>
+                        Download Free
+                        <span class="btn-shine"></span>
+                    </a>
+                    <a href="#features" class="btn-secondary">
+                        <i data-lucide="play-circle" class="btn-icon"></i>
+                        See How It Works
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <i data-lucide="brain" class="trust-icon"></i>
+                        <span>Offload Your Mind</span>
+                    </div>
+                    <div class="trust-item">
+                        <i data-lucide="cloud" class="trust-icon"></i>
+                        <span>iCloud Sync</span>
+                    </div>
+                    <div class="trust-item">
+                        <i data-lucide="globe" class="trust-icon"></i>
+                        <span>14 Languages</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero Visual -->
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-demo">
+                            <div class="demo-header">
+                                <div class="demo-time">9:41</div>
+                                <div class="demo-battery">
+                                    <i data-lucide="battery" class="battery-icon"></i>
+                                </div>
+                            </div>
+                            <div class="demo-content">
+                                <div class="voice-indicator">
+                                    <div class="voice-waves">
+                                        <span class="wave"></span>
+                                        <span class="wave"></span>
+                                        <span class="wave"></span>
+                                        <span class="wave"></span>
+                                        <span class="wave"></span>
+                                    </div>
+                                    <p class="voice-text">"Remind me to call the doctor tomorrow"</p>
+                                </div>
+                                <div class="task-item demo-task">
+                                    <i data-lucide="circle" class="task-checkbox"></i>
+                                    <div class="task-details">
+                                        <span class="task-title">Call the doctor</span>
+                                        <span class="task-due">Tomorrow, 9:00 AM</span>
+                                    </div>
+                                </div>
+                                <div class="ai-response">
+                                    <i data-lucide="check-circle" class="response-icon"></i>
+                                    <span>"Done! I'll remember for you."</span>
+                                </div>
+                                <div class="demo-mic-button">
+                                    <i data-lucide="mic"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-reflection"></div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+    
+    <!-- Problem Section -->
+    <section class="problem" id="problem">
+        <div class="container">
+            <h2 class="section-title">Stop Carrying Everything in Your Head</h2>
+            <p class="section-subtitle">The mental load of modern life is exhausting</p>
+            
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="pain-icon">
+                        <i data-lucide="brain"></i>
+                    </div>
+                    <h3>"I keep forgetting things"</h3>
+                    <p>Important tasks slip through the cracks because you're juggling too many thoughts at once.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <div class="pain-icon">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <h3>"I remember at the wrong time"</h3>
+                    <p>3 AM thoughts: "I need to buy milk." By morning? Completely forgotten.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <div class="pain-icon">
+                        <i data-lucide="car"></i>
+                    </div>
+                    <h3>"I can't type right now"</h3>
+                    <p>Driving, cooking, exercising – your hands are busy when ideas strike.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <div class="pain-icon">
+                        <i data-lucide="loader"></i>
+                    </div>
+                    <h3>"My mind never stops"</h3>
+                    <p>The constant mental chatter of "don't forget this" is exhausting.</p>
+                </div>
+            </div>
+            
+            <div class="problem-summary">
+                <div class="summary-content">
+                    <i data-lucide="lightbulb" class="summary-icon"></i>
+                    <p>Your brain is for having ideas, not holding them.</p>
+                    <p class="summary-highlight">Let Voxa do the remembering for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">
+                Capture Tasks Instantly,
+                <span class="gradient-text">Forget Nothing</span>
+            </h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="mic"></i>
+                    </div>
+                    <h3>Voice Recognition</h3>
+                    <p>Capture tasks by speaking naturally. No typing required – just say what's on your mind.</p>
+                    <div class="feature-examples">
+                        <div class="example">"Buy groceries, high priority"</div>
+                        <div class="example">"Meeting with Sarah Friday at 3pm"</div>
+                        <div class="example">"Remind me to call mom"</div>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3>Smart AI Analysis</h3>
+                    <p>Choose your AI: <strong>Apple's on-device AI</strong> works offline and is 100% free. For even smarter parsing, connect <strong>cloud AI</strong> (OpenAI, Claude) with your own API key.</p>
+                    <div class="ai-comparison">
+                        <div class="ai-option">
+                            <i data-lucide="cpu" class="sub-icon"></i>
+                            <div>
+                                <strong>Apple AI</strong>
+                                <span class="ai-tag-inline free">Free · Offline</span>
+                            </div>
+                        </div>
+                        <div class="ai-option">
+                            <i data-lucide="cloud" class="sub-icon"></i>
+                            <div>
+                                <strong>Cloud AI</strong>
+                                <span class="ai-tag-inline premium">Better results · Your API key</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h3>14 Languages</h3>
+                    <p>Speak in your native language. Full voice command and feedback support.</p>
+                    <div class="languages-grid">
+                        <span class="lang">🇺🇸 English</span>
+                        <span class="lang">🇫🇷 Français</span>
+                        <span class="lang">🇩🇪 Deutsch</span>
+                        <span class="lang">🇪🇸 Español</span>
+                        <span class="lang">🇮🇹 Italiano</span>
+                        <span class="lang">🇵🇹 Português</span>
+                        <span class="lang">🇮🇱 עברית</span>
+                        <span class="lang">🇸🇦 العربية</span>
+                        <span class="lang">🇷🇺 Русский</span>
+                        <span class="lang">🇯🇵 日本語</span>
+                        <span class="lang">🇰🇷 한국어</span>
+                        <span class="lang">🇨🇳 简体中文</span>
+                        <span class="lang">🇹🇼 繁體中文</span>
+                        <span class="lang">🇭🇰 粵語</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="cloud"></i>
+                    </div>
+                    <h3>iCloud Sync</h3>
+                    <p>Access your tasks on all your Apple devices. Create on iPhone, view on iPad – always in sync.</p>
+                    <div class="feature-sub-items">
+                        <div class="sub-feature">
+                            <i data-lucide="smartphone" class="sub-icon"></i>
+                            <span>iPhone</span>
+                        </div>
+                        <div class="sub-feature">
+                            <i data-lucide="tablet" class="sub-icon"></i>
+                            <span>iPad</span>
+                        </div>
+                        <div class="sub-feature">
+                            <i data-lucide="refresh-cw" class="sub-icon"></i>
+                            <span>Auto Sync</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>Customizable Themes</h3>
+                    <p>Choose from multiple color palettes to personalize your experience. Categories with custom colors.</p>
+                    <div class="theme-preview">
+                        <span class="theme-dot" style="background: #8b5cf6;"></span>
+                        <span class="theme-dot" style="background: #06b6d4;"></span>
+                        <span class="theme-dot" style="background: #10b981;"></span>
+                        <span class="theme-dot" style="background: #f59e0b;"></span>
+                        <span class="theme-dot" style="background: #ef4444;"></span>
+                        <span class="theme-dot" style="background: #ec4899;"></span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="bell"></i>
+                    </div>
+                    <h3>Due Date Reminders</h3>
+                    <p>Never miss a deadline. Get notified at the right time so you can focus on the present.</p>
+                    <div class="feature-sub-items">
+                        <div class="sub-feature">
+                            <i data-lucide="clock" class="sub-icon"></i>
+                            <span>Smart Timing</span>
+                        </div>
+                        <div class="sub-feature">
+                            <i data-lucide="pin" class="sub-icon"></i>
+                            <span>Pin Important</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="demo">
+        <div class="container">
+            <h2 class="section-title">Capture Tasks in Seconds</h2>
+            <p class="section-subtitle">Three steps to a clear mind</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Tap the Microphone</h3>
+                        <p>One tap. That's it. No menus, no friction.</p>
+                        <div class="step-visual">
+                            <div class="mic-button-demo">
+                                <i data-lucide="mic"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Speak Your Mind</h3>
+                        <p>Say what you need to do, naturally. Voxa understands dates, priorities, everything.</p>
+                        <div class="step-visual">
+                            <div class="speech-demo">
+                                <div class="speech-waves">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <p>"Buy groceries, high priority"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Forget About It</h3>
+                        <p>Voxa remembers for you. Get reminded at the right time. Your mind is free.</p>
+                        <div class="step-visual">
+                            <div class="confirmation-demo">
+                                <i data-lucide="check-circle" class="confirm-icon"></i>
+                                <p>"Done! I'll remember for you."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Perfect For Section -->
+    <section class="perfect-for" id="for-who">
+        <div class="container">
+            <h2 class="section-title">Perfect For</h2>
+            
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <i data-lucide="brain"></i>
+                    <h3>Mental Clutter Fighters</h3>
+                    <p>Anyone overwhelmed by the constant "don't forget" mental chatter</p>
+                </div>
+                <div class="audience-card">
+                    <i data-lucide="briefcase"></i>
+                    <h3>Busy Professionals</h3>
+                    <p>Capture ideas instantly between meetings and calls</p>
+                </div>
+                <div class="audience-card">
+                    <i data-lucide="mic"></i>
+                    <h3>Voice Lovers</h3>
+                    <p>People who prefer speaking over typing</p>
+                </div>
+                <div class="audience-card">
+                    <i data-lucide="zap"></i>
+                    <h3>Multitaskers</h3>
+                    <p>Hands-free task creation while driving, cooking, or working out</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple Pricing</h2>
+            <p class="section-subtitle">Start free, upgrade when you need more</p>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Free</h3>
+                        <div class="price">
+                            <span class="amount">€0</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Up to 10 tasks</li>
+                        <li><i data-lucide="check"></i> Voice commands</li>
+                        <li><i data-lucide="check"></i> Voice confirmation</li>
+                        <li><i data-lucide="check"></i> All languages</li>
+                        <li><i data-lucide="check"></i> Smart AI analysis</li>
+                    </ul>
+                    <a href="https://apps.apple.com/us/app/voxa-tasks/id6757767053" class="btn-secondary pricing-btn" target="_blank">
+                        Get Started Free
+                    </a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="price">
+                            <span class="currency">€</span>
+                            <span class="amount">5.99</span>
+                        </div>
+                        <span class="price-period">per year</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> <strong>Unlimited tasks</strong></li>
+                        <li><i data-lucide="check"></i> Voice commands</li>
+                        <li><i data-lucide="check"></i> Voice confirmation</li>
+                        <li><i data-lucide="check"></i> All languages</li>
+                        <li><i data-lucide="check"></i> Smart AI analysis</li>
+                        <li><i data-lucide="check"></i> <strong>iCloud Sync</strong></li>
+                        <li><i data-lucide="check"></i> <strong>All color themes</strong></li>
+                        <li><i data-lucide="check"></i> <strong>Smart reminders</strong></li>
+                        <li><i data-lucide="check"></i> Priority support</li>
+                    </ul>
+                    <a href="https://apps.apple.com/us/app/voxa-tasks/id6757767053" class="btn-primary pricing-btn" target="_blank">
+                        <i data-lucide="smartphone" class="btn-icon"></i>
+                        Start Pro Trial
+                        <span class="btn-shine"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Privacy Section -->
+    <section class="privacy-section" id="privacy">
+        <div class="container">
+            <div class="privacy-content">
+                <div class="privacy-icon">
+                    <i data-lucide="shield"></i>
+                </div>
+                <h2>Privacy First</h2>
+                <p>Your data stays on your device whenever possible. Voice recordings are processed securely and never stored. No ads.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA Section -->
+    <section class="final-cta" id="download">
+        <div class="container">
+            <h2 class="section-title">
+                Free Your Mind.
+                <span class="gradient-text">Let Voxa Remember.</span>
+            </h2>
+            
+            <p class="cta-subtitle">
+                Speak your tasks. Forget the mental clutter. Live in the moment.
+            </p>
+            
+            <div class="final-cta-content">
+                <a href="https://apps.apple.com/us/app/voxa-tasks/id6757767053" class="btn-primary btn-large" target="_blank">
+                    <i data-lucide="smartphone" class="btn-icon"></i>
+                    Download Voxa Tasks
+                    <span class="btn-shine"></span>
+                </a>
+                
+                <div class="app-store-note">
+                    Available on iOS App Store • iOS 18.1+ • Free to start
+                </div>
+                
+                <div class="final-trust-indicators">
+                    <div class="trust-item">
+                        <i data-lucide="brain"></i>
+                        <span>Offload Your Mind</span>
+                    </div>
+                    <div class="trust-item">
+                        <i data-lucide="cloud"></i>
+                        <span>iCloud Sync</span>
+                    </div>
+                    <div class="trust-item">
+                        <i data-lucide="heart"></i>
+                        <span>Made with Love</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3><a href="../index.html">iloveapps.io</a></h3>
+                    <p>We create apps you'll actually love</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#demo">How It Works</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <a href="faq.html">FAQ</a>
+                        <a href="how-to-create-tasks-by-voice.html">How to Create Tasks?</a>
+                        <a href="voxa-vs-siri-apple-google-reminders.html">Voxa vs Apple/Google</a>
+                        <a href="https://twitter.com/iloveappsio" target="_blank">@iloveappsio</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 iloveapps.io - Made with <i data-lucide="heart"></i> for iOS users</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Voxa Tasks","operatingSystem":"iOS","applicationCategory":"ProductivityApplication","offers":{"@type":"Offer","price":"5.99","priceCurrency":"EUR","description":"Pro Annual"},"description":"Voice task manager. Capture tasks naturally with your voice.","url":"https://iloveapps.io/voxa-tasks/"}
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://iloveapps.io/"},{"@type":"ListItem","position":2,"name":"Voxa Tasks","item":"https://iloveapps.io/voxa-tasks/"}]}
+    </script>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

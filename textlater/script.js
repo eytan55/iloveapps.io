@@ -198,7 +198,7 @@ function showAppStoreModal() {
                 <button class="modal-close">&times;</button>
                 <div class="modal-body">
                     <h3>🚀 Ready to Download TextLater?</h3>
-                    <p>TextLater is available on the iOS App Store for $2.99</p>
+                    <p>TextLater is available on the iOS App Store for €4.99</p>
                     <div class="modal-buttons">
                         <a href="https://apps.apple.com/app/textlater/id1449705569" target="_blank" class="btn-primary">
                             📱 Open App Store
