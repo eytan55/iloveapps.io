@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CyberSecurity Tycoon – Build. Hack. Dominate.</title>
+  <meta name="description" content="Run your own elite cybersecurity firm. Hire hackers, manage live crises, launch global products and win the Cyber War."/>
+  <link rel="icon" href="icon.png"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Lucide icons (ESM via CDN, used as inline SVG via lucide.createIcons()) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div id="cur"></div>
+<div id="cur-r"></div>
+
+<!-- Three.js canvas -->
+<canvas id="bg-canvas"></canvas>
+
+<div class="wrap">
+
+  <!-- ═══════════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════════ -->
+  <nav>
+    <div class="nav-logo">
+      <img src="icon.png" alt="CyberSecurity Tycoon icon"/>
+      CYBERSECURITY <em>&nbsp;TYCOON</em>
+    </div>
+    <div class="nav-links">
+      <a href="#trailer">Trailer</a>
+      <a href="#features">Features</a>
+      <a href="#office">Office</a>
+      <a href="#cyberwar">Cyber War</a>
+      <a href="#cybercup">CyberCup</a>
+      <a href="#cta">Download</a>
+    </div>
+    <a href="#cta" class="nav-cta">PLAY NOW →</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-eyebrow">Mobile Strategy Game · Coming Soon</div>
+
+    <h1 class="hero-title">
+      <span class="ht-cyber glitch" data-text="CYBERSECURITY">CYBERSECURITY</span>
+      <span class="ht-tycoon">TYCOON</span>
+    </h1>
+
+    <div class="hero-icon-wrap">
+      <img src="icon.png" alt="CyberSecurity Tycoon" class="hero-icon-small"/>
+    </div>
+
+    <p class="hero-sub">
+      Build your elite cybersecurity firm from the ground up. Recruit world-class hackers,
+      manage live crises, launch global products and win the
+      <strong style="color:var(--accent)">Cyber War</strong>.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#cta" class="btn-primary">GET EARLY ACCESS</a>
+      <a href="#screens" class="btn-ghost">SEE GAMEPLAY ↓</a>
+    </div>
+
+    <div class="stats-row">
+      <div><div class="stat-n">35+</div><div class="stat-l">Elite Hackers</div></div>
+      <div><div class="stat-n">7</div><div class="stat-l">Tech Domains</div></div>
+      <div><div class="stat-n">5</div><div class="stat-l">CyberCup Tiers</div></div>
+      <div><div class="stat-n">∞</div><div class="stat-l">Strategies</div></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SCREENSHOTS CAROUSEL
+  ═══════════════════════════════════════════ -->
+  <div id="screens">
+    <div class="screens-header reveal">
+      <div class="section-eyebrow" style="text-align:center;margin-bottom:.5rem">Gameplay</div>
+      <div style="text-align:center;margin-bottom:2rem">
+        <span class="tag accent">Real Screenshots</span>
+      </div>
+    </div>
+    <div class="screens-track" id="track"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       TRAILER
+  ═══════════════════════════════════════════ -->
+  <section id="trailer" style="padding:5rem 2rem;text-align:center">
+    <div class="reveal" style="max-width:800px;margin:0 auto">
+      <div class="section-eyebrow">Official Trailer</div>
+      <h2 class="section-title" style="margin-bottom:.6rem">See it in action</h2>
+      <p class="section-body" style="margin:0 auto 2.5rem">Watch the official gameplay trailer.</p>
+
+      <div class="trailer-phone-wrap">
+        <div class="trailer-phone-shell">
+          <div class="trailer-phone-notch"></div>
+          <!-- ⚠️  Remplace YOUR_VIDEO_ID par l'ID YouTube de ton trailer
+               Ex: https://youtu.be/dQw4w9WgXcQ  →  ID = dQw4w9WgXcQ  -->
+          <iframe
+            width="315"
+            height="560"
+            src="https://www.youtube.com/embed/aZBiqEP6pJU"
+            frameborder="0"
+            allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:none">
+          </iframe>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FEATURES
+  ═══════════════════════════════════════════ -->
+  <section id="features" style="background:linear-gradient(180deg,transparent,var(--accent-dim),transparent)">
+    <div class="features-intro reveal">
+      <div class="section-eyebrow">Core Systems</div>
+      <h2 class="section-title">Everything a tycoon needs</h2>
+      <p class="section-body" style="margin:0 auto">
+        Six deeply interlocked systems. Every hire, contract, and R&D choice cascades through your entire operation.
+      </p>
+    </div>
+    <div class="features-grid reveal">
+
+      <div class="fc">
+        <div class="fc-icon">
+          <i data-lucide="users"></i>
+        </div>
+        <div class="fc-title">TALENT ENGINE</div>
+        <div class="fc-desc">35+ unique hackers across 6 tiers, 6 specializations. Negotiate salaries, level up via XP, resist rival poaching attempts.</div>
+        <div class="fc-tag">// Staff Management</div>
+      </div>
+
+      <div class="fc">
+        <div class="fc-icon orange">
+          <i data-lucide="briefcase"></i>
+        </div>
+        <div class="fc-title">B2B CONTRACTS</div>
+        <div class="fc-desc">Pentest, Forensics, WebScan, Phishing missions with tight deadlines. Stack recurring revenue and build a client portfolio.</div>
+        <div class="fc-tag orange">// Business Dashboard</div>
+      </div>
+
+      <div class="fc">
+        <div class="fc-icon">
+          <i data-lucide="rocket"></i>
+        </div>
+        <div class="fc-title">R&D PIPELINE</div>
+        <div class="fc-desc">Design CyberWAF, PhishGuard, SentinelSIEM. Full product lifecycle from analysis to global launch.</div>
+        <div class="fc-tag">// Product Development</div>
+      </div>
+
+      <div class="fc">
+        <div class="fc-icon red">
+          <i data-lucide="siren"></i>
+        </div>
+        <div class="fc-title">RED PROTOCOL</div>
+        <div class="fc-desc">Live crisis management in your SOC. Lock staff into emergency sprints where every second is a decision with real consequences.</div>
+        <div class="fc-tag red">// SOC Operations</div>
+      </div>
+
+      <div class="fc">
+        <div class="fc-icon purple">
+          <i data-lucide="skull"></i>
+        </div>
+        <div class="fc-title">BLACK MARKET</div>
+        <div class="fc-desc">Trade ShadowCoins, flip Mystery Boxes, unlock rare hacker traits and contraband tools. High risk, extraordinary reward.</div>
+        <div class="fc-tag purple">// Underground Economy</div>
+      </div>
+
+      <div class="fc">
+        <div class="fc-icon">
+          <i data-lucide="building-2"></i>
+        </div>
+        <div class="fc-title">LIVING OFFICE</div>
+        <div class="fc-desc">Animated isometric cyberpunk HQ. Hackers move autonomously. Dynamic day/night lighting. Your office scales with your empire.</div>
+        <div class="fc-tag">// Pixel Art World</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       OFFICE SPLIT
+  ═══════════════════════════════════════════ -->
+  <section id="office" style="padding:5rem 2rem">
+    <div class="split">
+      <div class="reveal">
+        <div class="section-eyebrow">Pixel Art Office</div>
+        <h2 class="section-title">Your company,<br/>alive</h2>
+        <p class="section-body" style="margin-bottom:1.3rem">
+          Watch your hackers work, react to incidents, and roam a neon-lit isometric office.
+          The world map on the wall tracks your global threat intel in real time.
+        </p>
+        <p class="section-body" style="margin-bottom:1.8rem">
+          From basement startup to a full-floor HQ with server racks, SOC war room,
+          and your Hall of Fame on the wall.
+        </p>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <span class="tag accent">Day/Night Cycle</span>
+          <span class="tag accent">Behavior AI</span>
+          <span class="tag accent">Isometric Art</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="phone-shell"><img src="screen3.png" alt="Live office"/></div>
+          <div class="phone-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TEAM SPLIT
+  ═══════════════════════════════════════════ -->
+  <section style="padding:5rem 2rem;background:linear-gradient(180deg,transparent,rgba(139,92,246,.025),transparent)">
+    <div class="split">
+      <div class="reveal" style="order:2">
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="phone-shell"><img src="screen2.png" alt="Team management"/></div>
+          <div class="phone-glow"></div>
+        </div>
+      </div>
+      <div class="reveal" style="order:1">
+        <div class="section-eyebrow">Talent Management</div>
+        <h2 class="section-title">Build your<br/>dream team</h2>
+        <p class="section-body" style="margin-bottom:1.3rem">
+          Each hacker has a unique AI portrait, personality traits, and skill spread across
+          8 domains: Offense, Defense, Exploit, Forensics, Intel, Automation, Social, Leadership.
+        </p>
+        <p class="section-body" style="margin-bottom:1.8rem">
+          Level them up through missions, invest in training, and fight off headhunters
+          trying to poach your best operatives.
+        </p>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <span class="tag purple">Tier 1–6 Hackers</span>
+          <span class="tag purple">XP System</span>
+          <span class="tag purple">Anti-Poaching</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CYBER WAR
+  ═══════════════════════════════════════════ -->
+  <section id="cyberwar" style="padding:0">
+    <div class="cw-inner">
+      <div class="reveal">
+        <div class="cw-badge">⚔ End-Game · Late Stage</div>
+        <div class="section-eyebrow">Cyber War</div>
+        <h2 class="section-title glitch" data-text="TOTAL WAR">TOTAL WAR</h2>
+        <p class="section-body" style="margin-bottom:2rem">
+          Once you've dominated the market, the gloves come off. Launch Strategic Audits,
+          zero-day programs, and Corporate Espionage ops against rival firms.
+          The biggest risks deliver the biggest rewards.
+        </p>
+        <div class="cw-nodes">
+
+          <div class="cw-node">
+            <div class="cw-node-icon"><i data-lucide="crosshair"></i></div>
+            <div>
+              <div class="cw-node-title">MAJOR OPERATIONS</div>
+              <div class="cw-node-desc">Audit Stratégique, Zero-Day Program massive cash &amp; rep multipliers</div>
+            </div>
+          </div>
+
+          <div class="cw-node">
+            <div class="cw-node-icon"><i data-lucide="user-search"></i></div>
+            <div>
+              <div class="cw-node-title">CORPORATE ESPIONAGE</div>
+              <div class="cw-node-desc">Steal tech, poach talent, plant moles in competitor firms</div>
+            </div>
+          </div>
+
+          <div class="cw-node">
+            <div class="cw-node-icon"><i data-lucide="globe"></i></div>
+            <div>
+              <div class="cw-node-title">FOREIGN OPERATIONS</div>
+              <div class="cw-node-desc">Expand into new markets, run cross-border cyber ops</div>
+            </div>
+          </div>
+
+          <div class="cw-node">
+            <div class="cw-node-icon"><i data-lucide="command"></i></div>
+            <div>
+              <div class="cw-node-title">COMMAND CENTER</div>
+              <div class="cw-node-desc">Orchestrate multi-front campaigns from your global HQ</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="reveal" style="display:flex;flex-direction:column;gap:1.5rem">
+        <div class="terminal">
+          <div class="t-head">
+            <div class="td r"></div><div class="td y"></div><div class="td g"></div>
+            <div class="t-title">CYBER WAR TERMINAL</div>
+          </div>
+          <div class="t-body" id="cwTerminal">
+            <div><span class="p">$ </span><span class="c">cyberwar --status</span></div>
+            <div><span class="ok">✓</span> <span class="dim">Phase: TOTAL WAR active</span></div>
+            <div><span class="p">$ </span><span class="c">rivals --list</span></div>
+            <div><span class="dim">&nbsp; 1. NovaSec &nbsp;&nbsp;&nbsp;REP: 8420 ★</span></div>
+            <div><span class="dim">&nbsp; 2. GhostMatrix REP: 7100</span></div>
+            <div><span class="dim">&nbsp; 3. YOU &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REP: 6890 ↑</span></div>
+            <div><span class="p">$ </span><span class="c">op --zero-day --target NovaSec</span></div>
+            <div><span class="w">⚠ </span><span class="dim">Cost: $420,000 · Risk: HIGH</span></div>
+            <div><span class="w">⚠ </span><span class="dim">Team locked: 48h sprint</span></div>
+            <div><span class="p">$ </span><span class="c">confirm --yes<span class="cursor"></span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       R&D SKILL TREE + BLACK MARKET SPLIT
+  ═══════════════════════════════════════════ -->
+  <section style="padding:5rem 2rem">
+    <div class="split">
+      <div class="reveal">
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="phone-shell"><img src="screen4.png" alt="R&D Skill Tree"/></div>
+          <div class="phone-glow"></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="section-eyebrow">R&D Skill Tree + Black Market</div>
+        <h2 class="section-title">7 paths.<br/>One winner.</h2>
+        <p class="section-body" style="margin-bottom:1.3rem">
+          An interconnected hex skill graph with 7 major domains. Each unlock reshapes
+          your available contracts, products, and Cyber War operations.
+        </p>
+        <p class="section-body" style="margin-bottom:1.8rem">
+          Trade on the Black Market with ShadowCoins. Flip Mystery Boxes for rare upgrades.
+          Convert R&D points into raw advantages.
+        </p>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <span class="tag orange">Operations</span>
+          <span class="tag orange">Laboratory</span>
+          <span class="tag orange">Automation</span>
+          <span class="tag purple">Black Market</span>
+          <span class="tag purple">ShadowCoins</span>
+          <span class="tag purple">Mystery Box</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════════ -->
+  <section id="how" style="background:rgba(0,0,0,.15)">
+    <div style="max-width:820px;margin:0 auto" class="reveal">
+      <div class="section-eyebrow">Playbook</div>
+      <h2 class="section-title">From startup<br/>to empire</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-n">01</div>
+        <div>
+          <h3>FOUND YOUR FIRM</h3>
+          <p>Open your first office, hire 2–3 seed hackers, pick your initial specialization. A single early decision can define your competitive DNA for the entire run.</p>
+          <div class="step-tag">// Seed Capital · Office Level 1</div>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-n">02</div>
+        <div>
+          <h3>WIN CONTRACTS &amp; BUILD REP</h3>
+          <p>Accept B2B missions, assign the right specialists, hit tight deadlines. Reputation unlocks premium clients and triggers rival poaching attempts on your best talent.</p>
+          <div class="step-tag">// Contracts · Market Intel Feed</div>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-n">03</div>
+        <div>
+          <h3>RESEARCH &amp; LAUNCH PRODUCTS</h3>
+          <p>Invest R&D points into security SaaS. Beta-test, ship globally, watch passive revenue compound your growth month over month.</p>
+          <div class="step-tag">// R&D Pipeline · Product Launch</div>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-n">04</div>
+        <div>
+          <h3>ENTER TOTAL CYBER WAR</h3>
+          <p>Once dominant, unlock end-game operations. Zero-day programs, Corporate Espionage, Foreign Ops. Climb to Diamond in the CyberCup. Etch your name in the Hall of Fame.</p>
+          <div class="step-tag">// Cyber War · CyberCup Diamond</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CYBERCUP
+  ═══════════════════════════════════════════ -->
+  <section id="cybercup" style="text-align:center">
+    <div class="reveal" style="max-width:600px;margin:0 auto">
+      <div class="section-eyebrow">Monthly Tournament</div>
+      <h2 class="section-title">The CyberCup</h2>
+      <p class="section-body" style="margin:0 auto">
+        Every 15 days, cybersec firms face off in evolving brackets. Your reputation score
+        determines your division. Win to climb. Lose and adapt.
+      </p>
+    </div>
+    <div class="cup-tiers reveal">
+      <div class="tier">
+        <div class="tier-ico"><i data-lucide="shield"></i></div>
+        <div class="tier-name">BRONZE</div>
+      </div>
+      <div class="tier">
+        <div class="tier-ico"><i data-lucide="shield-check"></i></div>
+        <div class="tier-name">SILVER</div>
+      </div>
+      <div class="tier active">
+        <div class="tier-ico"><i data-lucide="star"></i></div>
+        <div class="tier-name">GOLD</div>
+      </div>
+      <div class="tier">
+        <div class="tier-ico"><i data-lucide="gem"></i></div>
+        <div class="tier-name">PLATINUM</div>
+      </div>
+      <div class="tier">
+        <div class="tier-ico"><i data-lucide="crown"></i></div>
+        <div class="tier-name">DIAMOND</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA
+  ═══════════════════════════════════════════ -->
+  <section id="cta">
+    <div class="reveal">
+      <h2 class="cta-title">Ready to<br/><em>dominate</em><br/>the market?</h2>
+      <p class="cta-sub">
+        CyberSecurity Tycoon is coming to iOS and Android.
+        Join the early access list and be first to play.
+      </p>
+      <a href="#" class="btn-primary" style="display:inline-block;margin-bottom:2.5rem">
+        ✉ GET EARLY ACCESS
+      </a>
+      <div class="platform-btns">
+        <a href="#" class="platform-btn">
+          <!-- Apple icon -->
+          <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          iOS App Store
+        </a>
+        <a href="#" class="platform-btn">
+          <!-- Android icon -->
+          <svg viewBox="0 0 24 24"><path d="M3.18 23.76c.38.21.82.19 1.22-.04L16 16.54l-3.37-3.37L3.18 23.76zM20.5 10.36L17.79 8.8l-3.15 3.14 3.16 3.16 2.69-1.58c.77-.45.77-1.71.01-2.16zM2.11.31C1.79.66 1.6 1.2 1.6 1.9v20.22c0 .7.19 1.24.51 1.59l.08.08 11.32-11.32v-.27L2.19.23l-.08.08zM16 7.46L4.4.28c-.4-.23-.84-.25-1.22-.04L12.63 9.7l3.37-3.37-.01.13z"/></svg>
+          Android Play Store
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer>
+    <div>© 2025 <a href="https://iloveapps.io">iloveapps.io</a> CyberSecurity Tycoon</div>
+    <div class="footer-links">
+      <a href="https://iloveapps.io">← All Apps</a>
+      <a href="https://twitter.com/iloveappsio">Twitter</a>
+      <a href="https://eytan55.github.io/textlater.github.io/privacy-policy-en.html">Privacy Policy</a>
+    </div>
+  </footer>
+
+</div><!-- /wrap -->
+
+<!-- Main JS -->
+<script src="main.js"></script>
+
+<!-- Initialize Lucide icons after DOM is ready -->
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>
