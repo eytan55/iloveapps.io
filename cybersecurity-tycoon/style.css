@@ -581,7 +581,12 @@ section { padding: 5.5rem 2rem; }
   color: transparent; -webkit-text-stroke: 2px var(--accent);
   font-style: normal; text-shadow: 0 0 40px var(--accent-glow);
 }
-.cta-sub { color: var(--text-mid); max-width: 400px; margin: 0 auto 2.5rem; font-size: .93rem; }
+.cta-sub { color: var(--text-mid); max-width: 400px; margin: 0 auto 1.2rem; font-size: .93rem; }
+.cta-languages {
+  font-family: var(--font-hud); font-size: .62rem; letter-spacing: .14em;
+  color: var(--text-dim); text-transform: uppercase;
+  margin: 0 auto 2.5rem; max-width: 550px; line-height: 1.6;
+}
 .platform-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: .4rem; }
 .platform-btn {
   display: inline-flex; align-items: center; gap: .7rem;
