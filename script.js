@@ -293,12 +293,22 @@ function initScrollEffects() {
         });
     }, observerOptions);
     
-    // Observe elements with enhanced timing
-    const animatedElements = document.querySelectorAll('.apps-header, .cta, .app-card');
-    animatedElements.forEach((el, index) => {
+    // Observe headers and cta with snappier timing and no delay
+    const generalElements = document.querySelectorAll('.apps-header, .cta');
+    generalElements.forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(40px) scale(0.95)';
-        el.style.transition = `all 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.15}s`;
+        el.style.transform = 'translateY(30px) scale(0.98)';
+        el.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        observer.observe(el);
+    });
+
+    // Observe cards with row-based stagger delay for snappier scrolling
+    const cardElements = document.querySelectorAll('.app-card');
+    cardElements.forEach((el, index) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(40px) scale(0.96)';
+        const delay = (index % 3) * 0.06; // Row-based stagger (0s, 0.06s, 0.12s)
+        el.style.transition = `all 0.5s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s`;
         observer.observe(el);
     });
 }
