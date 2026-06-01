@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Photo Transfer - Transférez vos photos et vidéos d'un iPhone vers PC en un clic</title>
+    <meta name="description" content="Transférez toutes les photos et vidéos de votre iPhone vers votre PC Windows en un clic. Transfert USB ultra-rapide, conversion HEIC en JPG, détection intelligente des doublons. Essai gratuit disponible.">
+    <meta name="keywords" content="transfert photo iphone, transferer photos iphone sur pc, iphone vers windows, heic en jpg, sauvegarde photo iphone, transfert video iphone">
+
+    <link rel="canonical" href="https://iloveapps.io/iphone-photo-transfer/fr/">
+    <link rel="alternate" hreflang="en" href="https://iloveapps.io/iphone-photo-transfer/">
+    <link rel="alternate" hreflang="fr" href="https://iloveapps.io/iphone-photo-transfer/fr/">
+    <link rel="alternate" hreflang="x-default" href="https://iloveapps.io/iphone-photo-transfer/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="iPhone Photo Transfer - Transférez vos photos & vidéos d'un iPhone vers PC">
+    <meta property="og:description" content="Transférez toutes les photos et vidéos de votre iPhone vers votre PC Windows en un clic. Ultra-rapide, privé et simple.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iloveapps.io/iphone-photo-transfer/fr/">
+    <meta property="og:image" content="https://iloveapps.io/iphone-photo-transfer/assets/images/og-image.png">
+    <meta property="og:site_name" content="iloveapps.io">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@iloveappsio">
+    <meta name="twitter:title" content="iPhone Photo Transfer - Transférez vos photos & vidéos d'un iPhone vers PC">
+    <meta name="twitter:description" content="Transférez toutes les photos et vidéos de votre iPhone vers votre PC Windows en un clic.">
+    <meta name="twitter:image" content="https://iloveapps.io/iphone-photo-transfer/assets/images/og-image.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-68ZN528Z5W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-68ZN528Z5W');
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body>
+
+    <!-- ========== NAV ========== -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">
+                <img src="../assets/images/logo.png" alt="iPhone Photo Transfer" class="nav-logo-img">
+                <span class="nav-logo-text">iPhone Photo Transfer</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Fonctionnalités</a>
+                <a href="#how-it-works">Comment ça marche</a>
+                <a href="#pricing">Tarifs</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="nav-cta" id="nav-cta" target="_blank">
+                <svg class="nav-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+                Télécharger
+            </a>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-noise"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+
+        <div class="container hero-container">
+            <!-- Top: Transfer animation -->
+            <div class="transfer-visual" id="transfer-visual">
+                <div class="device device-iphone">
+                    <div class="device-screen">
+                        <i data-lucide="smartphone" class="device-icon"></i>
+                    </div>
+                    <span class="device-label">iPhone</span>
+                </div>
+
+                <div class="transfer-flow">
+                    <div class="transfer-line"></div>
+                    <div class="transfer-particles" id="transfer-particles"></div>
+                    <div class="transfer-badge-mid">
+                        <i data-lucide="arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="device device-pc">
+                    <div class="device-screen">
+                        <i data-lucide="monitor" class="device-icon"></i>
+                    </div>
+                    <span class="device-label">PC Windows</span>
+                </div>
+            </div>
+
+            <!-- Center: Text -->
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Transférez vos photos & vidéos<br>
+                    de votre iPhone vers PC.<br>
+                    <span class="hero-highlight">En un clic. Hors ligne. Rapide.</span>
+                </h1>
+                <p class="hero-desc">
+                    Transférez des milliers de photos et vidéos de votre iPhone vers votre PC Windows en un clic, par USB, sans dépendre du cloud. Privé par conception.
+                </p>
+            </div>
+
+            <!-- CTA row -->
+            <div class="hero-actions">
+                <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="btn btn-primary btn-glow" id="hero-cta" target="_blank">
+                    <svg class="btn-win-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+                    Télécharger sur le Microsoft Store
+                    <span class="btn-badge">Essai Gratuit</span>
+                </a>
+                <div class="hero-meta">
+                    <span class="hero-meta-item">
+                        <i data-lucide="shield-check" class="hero-meta-icon"></i>
+                        100% Hors ligne
+                    </span>
+                    <span class="hero-meta-divider">·</span>
+                    <span class="hero-meta-item">
+                        <i data-lucide="zap" class="hero-meta-icon"></i>
+                        Windows 10/11
+                    </span>
+                    <span class="hero-meta-divider">·</span>
+                    <span class="hero-meta-item">
+                        <i data-lucide="credit-card" class="hero-meta-icon"></i>
+                        Sans abonnement
+                    </span>
+                </div>
+            </div>
+
+            <!-- Screenshot -->
+            <div class="hero-screenshot" id="hero-screenshot-wrap">
+                <div class="screenshot-window">
+                    <div class="window-bar">
+                        <div class="window-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="window-title">
+                            <img src="../assets/images/logo.png" alt="" class="window-title-icon">
+                            iPhone Photo Transfer
+                        </div>
+                        <div class="window-controls">
+                            <span class="wc wc-min">─</span>
+                            <span class="wc wc-max">□</span>
+                            <span class="wc wc-close">×</span>
+                        </div>
+                    </div>
+                    <div class="window-content">
+                        <img src="../assets/images/screenshotfr.png" alt="iPhone Photo Transfer détectant 476 photos et 529 vidéos sur iPhone 12, avec options de transfert, conversion HEIC et détection des doublons" class="window-screenshot">
+                    </div>
+                </div>
+                <div class="screenshot-reflection"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SOCIAL PROOF BAR ========== -->
+    <section class="proof-bar">
+        <div class="container">
+            <div class="proof-items">
+                <div class="proof-item">
+                    <span class="proof-number" data-target="10">0</span><span class="proof-suffix">x</span>
+                    <span class="proof-label">Plus rapide que l'Explorateur</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-item">
+                    <span class="proof-number" data-target="100">0</span><span class="proof-suffix">%</span>
+                    <span class="proof-label">Privé & Hors ligne</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-item">
+                    <span class="proof-number" data-target="0">0</span><span class="proof-suffix"> cloud</span>
+                    <span class="proof-label">Aucune donnée envoyée</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-item" title="Anglais, Français, Allemand, Espagnol, Italien, Portugais, Japonais, Coréen, Chinois Simplifié & Chinois Traditionnel">
+                    <span class="proof-number" data-target="10">0</span><span class="proof-suffix"> langues</span>
+                    <span class="proof-label">10 langues supportées</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURES - BENTO GRID ========== -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header section-header-center">
+                <span class="chip">Fonctionnalités</span>
+                <h2>Conçu pour une seule tâche.<br><span class="text-gradient">Et le fait à la perfection.</span></h2>
+            </div>
+
+            <div class="bento">
+                <!-- Large: Speed -->
+                <div class="bento-card bento-lg" data-reveal>
+                    <div class="bento-visual">
+                        <div class="speed-meter" id="speed-meter">
+                            <div class="speed-bar">
+                                <div class="speed-fill" id="speed-fill"></div>
+                            </div>
+                            <div class="speed-labels">
+                                <span>Explorateur Windows</span>
+                                <span class="speed-highlight">iPhone Photo Transfer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-text">
+                        <div class="bento-icon bento-icon-blue"><i data-lucide="zap"></i></div>
+                        <h3>Transfert USB ultra-rapide</h3>
+                        <p>Utilise le protocole natif AMDS d'Apple pour une vitesse brute via USB. Transférez des milliers de photos en quelques minutes, pas en quelques heures. Jusqu'à 10 fois plus rapide qu'un simple glisser-déposer dans l'Explorateur Windows.</p>
+                    </div>
+                </div>
+
+                <!-- Medium: HEIC -->
+                <div class="bento-card bento-md" data-reveal>
+                    <div class="bento-icon bento-icon-green"><i data-lucide="image"></i></div>
+                    <h3>Conversion HEIC → JPG</h3>
+                    <p>Convertit automatiquement les photos HEIC d'Apple au format universel JPG compatible partout. Conservez les originaux ou remplacez-les.</p>
+                    <span class="bento-tag bento-tag-premium">Premium</span>
+                </div>
+
+                <!-- Medium: Duplicates -->
+                <div class="bento-card bento-md" data-reveal>
+                    <div class="bento-icon bento-icon-purple"><i data-lucide="filter"></i></div>
+                    <h3>Détection intelligente des doublons</h3>
+                    <p>Ignore automatiquement les fichiers déjà transférés. Plus besoin de nettoyer manuellement des milliers de photos en double.</p>
+                </div>
+
+                <!-- Small: Organize -->
+                <div class="bento-card bento-sm" data-reveal>
+                    <div class="bento-icon bento-icon-cyan"><i data-lucide="folder-tree"></i></div>
+                    <h3>Organisation auto</h3>
+                    <p>Photos triées automatiquement par mois ou par année dans des dossiers clairs.</p>
+                </div>
+
+                <!-- Small: Privacy -->
+                <div class="bento-card bento-sm" data-reveal>
+                    <div class="bento-icon bento-icon-emerald"><i data-lucide="lock"></i></div>
+                    <h3>100% Privé</h3>
+                    <p>Aucun cloud. Aucun envoi. Tout reste entre votre iPhone et votre PC.</p>
+                </div>
+
+                <!-- Small: Videos -->
+                <div class="bento-card bento-sm" data-reveal>
+                    <div class="bento-icon bento-icon-orange"><i data-lucide="video"></i></div>
+                    <h3>Photos & Vidéos</h3>
+                    <p>Transférez à la fois vos photos et vos vidéos. Sélectionnez précisément ce dont vous avez besoin ou récupérez tout.</p>
+                </div>
+
+                <!-- Small: Drivers -->
+                <div class="bento-card bento-sm" data-reveal>
+                    <div class="bento-icon bento-icon-pink"><i data-lucide="wrench"></i></div>
+                    <h3>Pilotes installés en 1 clic</h3>
+                    <p>Pas besoin d'installer iTunes. L'application installe automatiquement les pilotes Apple pour vous.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section class="how" id="how-it-works">
+        <div class="container">
+            <div class="section-header section-header-center">
+                <span class="chip chip-dark">Comment ça marche</span>
+                <h2>Trois étapes. <span class="text-gradient-light">Zéro tracas.</span></h2>
+                <p class="section-desc-light">Aucune configuration, pas d'iTunes, aucune compétence technique requise.</p>
+            </div>
+
+            <div class="steps">
+                <div class="step" data-reveal>
+                    <div class="step-num">01</div>
+                    <div class="step-visual">
+                        <div class="step-circle">
+                            <i data-lucide="cable"></i>
+                        </div>
+                    </div>
+                    <h3>Branchez votre iPhone</h3>
+                    <p>Connectez-le par câble USB. L'application détecte instantanément votre appareil et affiche le nombre de photos & vidéos.</p>
+                </div>
+
+                <div class="step-arrow"><i data-lucide="move-right"></i></div>
+
+                <div class="step" data-reveal>
+                    <div class="step-num">02</div>
+                    <div class="step-visual">
+                        <div class="step-circle">
+                            <i data-lucide="sliders-horizontal"></i>
+                        </div>
+                    </div>
+                    <h3>Choisissez vos options</h3>
+                    <p>Sélectionnez le dossier de destination, le style d'organisation, la gestion des doublons et la conversion.</p>
+                </div>
+
+                <div class="step-arrow"><i data-lucide="move-right"></i></div>
+
+                <div class="step" data-reveal>
+                    <div class="step-num">03</div>
+                    <div class="step-visual">
+                        <div class="step-circle step-circle-accent">
+                            <i data-lucide="rocket"></i>
+                        </div>
+                    </div>
+                    <h3>Transférez !</h3>
+                    <p>Cliquez sur le bouton et regardez vos photos défiler. Installez-vous confortablement et détendez-vous.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRICING ========== -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header section-header-center">
+                <span class="chip">Tarifs</span>
+                <h2>Commencez gratuitement. <span class="text-gradient">Évoluez quand vous le souhaitez.</span></h2>
+                <p class="section-desc">Aucune carte de crédit requise. Testez toutes les fonctionnalités avant d'acheter.</p>
+            </div>
+
+            <div class="pricing-table-wrap">
+                <table class="pricing-table" id="pricing-table">
+                    <thead>
+                        <tr>
+                            <th class="pt-feature-col">Fonctionnalité</th>
+                            <th class="pt-plan-col">
+                                <div class="pt-plan">
+                                    <span class="pt-plan-name">Essai Gratuit</span>
+                                    <span class="pt-plan-price">0 €</span>
+                                </div>
+                            </th>
+                            <th class="pt-plan-col pt-plan-featured">
+                                <div class="pt-badge">Recommandé</div>
+                                <div class="pt-plan">
+                                    <span class="pt-plan-name">Premium</span>
+                                    <span class="pt-plan-price">6,99 €</span>
+                                    <span class="pt-plan-period">achat unique</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Transfert de fichiers</td>
+                            <td>Jusqu'à 50 fichiers</td>
+                            <td class="pt-highlight"><strong>Illimité</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Vitesse de transfert (AMDS)</td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Vitesse de transfert (secours MTP)</td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Détection intelligente des doublons</td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Organisation auto par date</td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Installation des pilotes en 1 clic</td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Diagnostics intégrés</td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                        </tr>
+                        <tr class="pt-row-accent">
+                            <td>Conversion HEIC → JPG</td>
+                            <td><i data-lucide="x" class="pt-x"></i></td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Mises à jour prioritaires</td>
+                            <td><i data-lucide="x" class="pt-x"></i></td>
+                            <td><i data-lucide="check" class="pt-check"></i></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="btn btn-outline btn-sm" id="cta-free" target="_blank">Essai Gratuit</a>
+                            </td>
+                            <td>
+                                <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="btn btn-primary btn-sm btn-glow" id="cta-premium" target="_blank">
+                                    Passer au Premium · 6,99 €
+                                    <span class="btn-shine"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="pricing-cards-mobile">
+                <!-- Card 1: Free Trial -->
+                <div class="pricing-card-mob">
+                    <h3>Essai Gratuit</h3>
+                    <div class="price">0 €</div>
+                    <ul>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Jusqu'à 50 fichiers</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Transfert USB ultra-rapide</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Détection intelligente des doublons</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Organisation auto par date</li>
+                        <li><svg class="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Conversion HEIC → JPG</li>
+                        <li><svg class="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Mises à jour prioritaires</li>
+                    </ul>
+                    <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="btn btn-outline btn-sm" target="_blank">Essai Gratuit</a>
+                </div>
+
+                <!-- Card 2: Premium (Featured) -->
+                <div class="pricing-card-mob featured">
+                    <div class="badge">Recommandé</div>
+                    <h3>Premium</h3>
+                    <div class="price">6,99 € <span>achat unique</span></div>
+                    <ul>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Transferts illimités</strong></li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Transfert USB ultra-rapide</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Détection intelligente des doublons</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Organisation auto par date</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Conversion HEIC → JPG</strong></li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Mises à jour prioritaires</strong></li>
+                    </ul>
+                    <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="btn btn-primary btn-sm btn-glow" target="_blank">Passer au Premium · 6,99 €</a>
+                </div>
+            </div>
+
+            <p class="pricing-note">
+                <i data-lucide="shield-check" class="pricing-note-icon"></i>
+                Protégé par la politique de remboursement de 30 jours du Microsoft Store. Payez une fois, utilisez à vie.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header section-header-center">
+                <span class="chip">FAQ</span>
+                <h2>Questions fréquentes</h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-col">
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-q" id="faq-q1">
+                            <span>Dois-je installer iTunes ?</span>
+                            <i data-lucide="plus" class="faq-toggle"></i>
+                        </button>
+                        <div class="faq-a">
+                            <p>Non ! L'application installe automatiquement les pilotes USB d'Apple en un clic. Pas besoin d'installer le logiciel iTunes complet. Elle fonctionne également en mode basique MTP sans aucun pilote.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-q" id="faq-q2">
+                            <span>Mes données sont-elles envoyées vers un serveur ?</span>
+                            <i data-lucide="plus" class="faq-toggle"></i>
+                        </button>
+                        <div class="faq-a">
+                            <p>Absolument pas. L'application fonctionne à 100 % hors ligne. Vos photos sont transférées directement de votre iPhone vers votre PC via USB. Rien n'est jamais mis en ligne nulle part.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-q" id="faq-q3">
+                            <span>Quelle est la différence entre AMDS et MTP ?</span>
+                            <i data-lucide="plus" class="faq-toggle"></i>
+                        </button>
+                        <div class="faq-a">
+                            <p><strong>AMDS</strong> utilise le protocole natif d'Apple pour une vitesse et une fiabilité maximales. <strong>MTP</strong> utilise le protocole intégré de Windows, qui est plus lent mais ne nécessite aucune configuration. L'application installe automatiquement les pilotes AMDS pour vous.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-col">
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-q" id="faq-q4">
+                            <span>Que comprend l'essai gratuit ?</span>
+                            <i data-lucide="plus" class="faq-toggle"></i>
+                        </button>
+                        <div class="faq-a">
+                            <p>L'essai gratuit comprend toutes les fonctionnalités à l'exception de la conversion HEIC → JPG, avec une limite de 50 fichiers transférés par session. Cela vous permet de tester l'application en profondeur avant d'acheter.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-q" id="faq-q5">
+                            <span>Quels iPhones et versions de Windows sont compatibles ?</span>
+                            <i data-lucide="plus" class="faq-toggle"></i>
+                        </button>
+                        <div class="faq-a">
+                            <p>Tous les iPhones équipés d'iOS 14 ou version supérieure sont compatibles. Fonctionne sous Windows 10 (1903+) et Windows 11 (en versions x64 et ARM64). L'application est disponible en 10 langues (anglais, français, allemand, espagnol, italien, portugais, japonais, coréen, chinois simplifié et traditionnel).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-q" id="faq-q6">
+                            <span>S'agit-il d'un abonnement ?</span>
+                            <i data-lucide="plus" class="faq-toggle"></i>
+                        </button>
+                        <div class="faq-a">
+                            <p>Non, c'est un achat unique. Payez 6,99 € une fois, utilisez à vie. Aucun frais récurrent, aucun coût caché. Toutes les futures mises à jour sont incluses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FINAL CTA ========== -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-final-inner">
+                <div class="cta-final-glow"></div>
+                <img src="../assets/images/logo.png" alt="" class="cta-final-logo">
+                <h2>Prêt à libérer vos photos ?</h2>
+                <p>Arrêtez de payer pour du stockage cloud. Arrêtez de vous battre avec l'Explorateur Windows.<br>Branchez, cliquez, et transférez.</p>
+                <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="btn btn-white btn-lg" id="cta-bottom" target="_blank">
+                    <svg class="btn-win-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+                    Télécharger sur le Microsoft Store
+                </a>
+                <span class="cta-final-note">Essai gratuit · Sans carte bancaire · Sans abonnement</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img src="../assets/images/logo.png" alt="" class="footer-logo">
+                    <span>iPhone Photo Transfer</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#features">Fonctionnalités</a>
+                    <a href="#pricing">Tarifs</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="https://eytan55.github.io/textlater.github.io/privacy-policy-en.html" target="_blank">Confidentialité</a>
+                    <a href="https://twitter.com/iloveappsio" target="_blank">Twitter</a>
+                    <a href="https://discord.gg/UhutX6ju6h" target="_blank">Discord</a>
+                </div>
+                <div class="footer-copy">
+                    &copy; 2025 <a href="https://twitter.com/iloveappsio" target="_blank">I Love Apps</a>. Tous droits réservés.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "I Love Apps",
+        "url": "https://textlater.app",
+        "logo": "https://textlater.app/assets/images/logoIloveApps.png",
+        "description": "Premium iOS applications for iPhone users",
+        "sameAs": ["https://twitter.com/iloveappsio"]
+      }
+    </script>
+
+    <script src="../script.js"></script>
+</body>
+</html>
