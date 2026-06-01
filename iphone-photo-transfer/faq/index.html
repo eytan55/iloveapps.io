@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ – How to Transfer Photos from iPhone to PC | iPhone Photo Transfer</title>
+    <meta name="description" content="Everything you need to know about transferring photos from iPhone to PC. Answers to common questions about HEIC conversion, slow transfers, DCIM folder issues, and more.">
+    <meta name="keywords" content="transfer photos iPhone to PC, HEIC to JPG, iPhone photos not showing on PC, DCIM folder empty, iPhone photo transfer slow, transfer without iTunes, transfer without iCloud, backup iPhone photos Windows">
+
+    <link rel="canonical" href="https://iloveapps.io/iphone-photo-transfer/faq/">
+    <link rel="alternate" hreflang="en" href="https://iloveapps.io/iphone-photo-transfer/faq/">
+    <link rel="alternate" hreflang="x-default" href="https://iloveapps.io/iphone-photo-transfer/faq/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FAQ – How to Transfer Photos from iPhone to PC">
+    <meta property="og:description" content="Answers to the most common questions about transferring photos and videos from iPhone to Windows PC.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iloveapps.io/iphone-photo-transfer/faq/">
+    <meta property="og:image" content="https://iloveapps.io/iphone-photo-transfer/assets/images/og-image.png">
+    <meta property="og:site_name" content="iloveapps.io">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-68ZN528Z5W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-68ZN528Z5W');
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Styles (shared with landing page) -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- FAQ-specific styles -->
+    <style>
+        /* === FAQ PAGE HERO === */
+        .faq-hero {
+            background: var(--grad-hero);
+            padding: 140px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(59,130,246,0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 50%, rgba(6,182,212,0.06) 0%, transparent 50%);
+            animation: faqHeroGlow 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes faqHeroGlow {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-2%, 2%); }
+        }
+
+        .faq-hero .container { position: relative; z-index: 1; }
+
+        .faq-hero-breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            color: var(--text-inv-2);
+            margin-bottom: 24px;
+        }
+
+        .faq-hero-breadcrumb a {
+            color: var(--text-inv-2);
+            transition: color 0.2s;
+        }
+
+        .faq-hero-breadcrumb a:hover { color: #fff; }
+
+        .faq-hero-breadcrumb svg {
+            width: 14px;
+            height: 14px;
+            opacity: 0.5;
+        }
+
+        .faq-hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+        }
+
+        .faq-hero h1 span {
+            background: var(--grad-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .faq-hero p {
+            font-size: 1.125rem;
+            color: var(--text-inv-2);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* === FAQ CONTENT AREA === */
+        .faq-content {
+            padding: 80px 0 40px;
+            background: var(--bg-page);
+        }
+
+        .faq-content-grid {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        /* --- Sidebar TOC --- */
+        .faq-toc {
+            position: sticky;
+            top: 100px;
+            background: var(--bg-card);
+            border-radius: var(--r-lg);
+            padding: 24px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .faq-toc h3 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-3);
+            margin-bottom: 16px;
+        }
+
+        .faq-toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .faq-toc-list a {
+            display: block;
+            font-size: 0.8125rem;
+            color: var(--text-2);
+            padding: 8px 12px;
+            border-radius: var(--r-sm);
+            transition: all 0.2s;
+            line-height: 1.4;
+        }
+
+        .faq-toc-list a:hover {
+            background: rgba(59,130,246,0.06);
+            color: var(--blue);
+        }
+
+        .faq-toc-list a.active {
+            background: rgba(59,130,246,0.08);
+            color: var(--blue);
+            font-weight: 600;
+        }
+
+        /* --- Main FAQ articles --- */
+        .faq-articles {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .faq-article {
+            scroll-margin-top: 100px;
+        }
+
+        .faq-article-card {
+            background: var(--bg-card);
+            border-radius: var(--r-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(0,0,0,0.06);
+            transition: box-shadow 0.3s var(--ease), transform 0.3s var(--ease);
+        }
+
+        .faq-article-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        .faq-article-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: var(--r-full);
+            background: var(--grad-brand);
+            color: #fff;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .faq-article h2 {
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--text-1);
+            margin-bottom: 16px;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+
+        .faq-article-body {
+            font-size: 0.9375rem;
+            line-height: 1.8;
+            color: var(--text-2);
+        }
+
+        .faq-article-body p {
+            margin-bottom: 16px;
+        }
+
+        .faq-article-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-article-body strong {
+            color: var(--text-1);
+            font-weight: 600;
+        }
+
+        .faq-article-body ul,
+        .faq-article-body ol {
+            margin: 12px 0 16px 20px;
+        }
+
+        .faq-article-body li {
+            margin-bottom: 8px;
+        }
+
+        .faq-article-body h3 {
+            font-size: 1.0625rem;
+            font-weight: 700;
+            color: var(--text-1);
+            margin: 24px 0 12px;
+        }
+
+        /* Inline CTA within articles */
+        .faq-inline-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(59,130,246,0.08);
+            color: var(--blue);
+            font-size: 0.8125rem;
+            font-weight: 600;
+            border-radius: var(--r-full);
+            margin-top: 12px;
+            transition: all 0.2s;
+        }
+
+        .faq-inline-cta:hover {
+            background: rgba(59,130,246,0.14);
+            transform: translateX(2px);
+        }
+
+        .faq-inline-cta svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Code-like keyword highlights */
+        .faq-article-body code {
+            background: rgba(59,130,246,0.08);
+            color: var(--blue);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+        }
+
+        /* Comparison box */
+        .faq-compare {
+            background: linear-gradient(135deg, rgba(59,130,246,0.04), rgba(6,182,212,0.04));
+            border: 1px solid rgba(59,130,246,0.1);
+            border-radius: var(--r-md);
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
+
+        .faq-compare-row {
+            display: grid;
+            grid-template-columns: 1.8fr 1.5fr 1.2fr;
+            gap: 16px;
+            align-items: center;
+            padding: 8px 0;
+            font-size: 0.875rem;
+        }
+
+        .faq-compare-row + .faq-compare-row {
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .faq-compare-label { color: var(--text-2); }
+        .faq-compare-value { font-weight: 600; color: var(--text-1); }
+        .faq-compare-value.highlight { color: var(--blue); }
+
+        /* Tip box */
+        .faq-tip {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            background: rgba(16,185,129,0.06);
+            border: 1px solid rgba(16,185,129,0.15);
+            border-radius: var(--r-md);
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 0.875rem;
+            color: var(--text-2);
+        }
+
+        .faq-tip-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--emerald);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* === BOTTOM CTA BANNER === */
+        .faq-cta-banner {
+            background: var(--bg-dark);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq-cta-banner::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .faq-cta-banner .container { position: relative; z-index: 1; }
+
+        .faq-cta-banner h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .faq-cta-banner p {
+            color: var(--text-inv-2);
+            font-size: 1rem;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-cta-banner .btn {
+            margin-bottom: 16px;
+        }
+
+        .faq-cta-sub {
+            font-size: 0.8125rem;
+            color: var(--text-inv-2);
+            opacity: 0.7;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 900px) {
+            .faq-content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-toc {
+                position: static;
+                margin-bottom: 16px;
+            }
+
+            .faq-toc-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 4px;
+            }
+
+            .faq-toc-list a {
+                font-size: 0.75rem;
+                padding: 6px 10px;
+            }
+
+            .faq-article-card {
+                padding: 28px 24px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .faq-hero {
+                padding: 120px 0 60px;
+            }
+
+            .faq-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .faq-toc {
+                padding: 16px;
+            }
+
+            .faq-compare {
+                padding: 12px 16px;
+            }
+
+            .faq-compare-row {
+                display: grid;
+                grid-template-columns: 1.2fr 1fr 1fr;
+                gap: 8px;
+                padding: 10px 0;
+                font-size: 0.75rem;
+            }
+
+            .faq-article-card {
+                padding: 24px 20px;
+            }
+
+            .nav-links { display: none; }
+        }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body>
+
+    <!-- ========== NAV ========== -->
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-inner">
+            <a href="../" class="nav-brand">
+                <img src="../assets/images/logo.png" alt="iPhone Photo Transfer" class="nav-logo-img">
+                <span class="nav-logo-text">iPhone Photo Transfer</span>
+            </a>
+            <div class="nav-links">
+                <a href="../#features">Features</a>
+                <a href="../#how-it-works">How it works</a>
+                <a href="../#pricing">Pricing</a>
+                <a href="./">FAQ</a>
+            </div>
+            <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="nav-cta" id="nav-cta" target="_blank">
+                <svg class="nav-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+                Download
+            </a>
+        </div>
+    </nav>
+
+    <!-- ========== FAQ HERO ========== -->
+    <section class="faq-hero">
+        <div class="container">
+            <div class="faq-hero-breadcrumb">
+                <a href="../">iPhone Photo Transfer</a>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <span>FAQ</span>
+            </div>
+            <h1>Frequently Asked Questions<br><span>about iPhone Photo Transfer</span></h1>
+            <p>In-depth answers to the most common questions about transferring photos and videos from your iPhone to your Windows PC.</p>
+        </div>
+    </section>
+
+    <!-- ========== FAQ CONTENT ========== -->
+    <section class="faq-content">
+        <div class="container">
+            <div class="faq-content-grid">
+
+                <!-- Sidebar TOC -->
+                <aside class="faq-toc" id="faq-toc">
+                    <h3>Table of Contents</h3>
+                    <ul class="faq-toc-list">
+                        <li><a href="#q1">Transfer without iTunes</a></li>
+                        <li><a href="#q2">Photos not showing on PC</a></li>
+                        <li><a href="#q3">HEIC to JPG conversion</a></li>
+                        <li><a href="#q4">Why transfer is slow</a></li>
+                        <li><a href="#q5">DCIM folder empty</a></li>
+                        <li><a href="#q6">Transfer without iCloud</a></li>
+                        <li><a href="#q7">Backup all photos to PC</a></li>
+                        <li><a href="#q8">AMDS vs MTP protocols</a></li>
+                        <li><a href="#q9">Organize photos by date</a></li>
+                        <li><a href="#q10">Transfer over USB only</a></li>
+                    </ul>
+                </aside>
+
+                <!-- FAQ Articles -->
+                <div class="faq-articles">
+
+                    <!-- Q1 -->
+                    <article class="faq-article" id="q1">
+                        <div class="faq-article-card">
+                            <div class="faq-article-num">1</div>
+                            <h2>How to Transfer Photos from iPhone to PC Without iTunes?</h2>
+                            <div class="faq-article-body">
+                                <p>You <strong>do not need iTunes</strong> to transfer photos from your iPhone to a Windows PC. In fact, most modern solutions work better without it. Here are the main methods available today:</p>
+
+                                <h3>Method 1: Using iPhone Photo Transfer (Recommended)</h3>
+                                <p>The fastest and simplest approach is to use a dedicated tool like <strong>iPhone Photo Transfer</strong>. It connects to your iPhone over USB and transfers all your photos and videos in just a few clicks. No iTunes, no iCloud, no account sign-in required.</p>
+                                <ul>
+                                    <li>Plug your iPhone into your PC via USB cable</li>
+                                    <li>The app <strong>auto-installs Apple's USB drivers</strong> (AMDS) with one click, no need for the full iTunes install</li>
+                                    <li>Select your destination folder and click Transfer</li>
+                                    <li>Photos and videos are copied at maximum USB speed, organized by date</li>
+                                </ul>
+
+                                <h3>Method 2: Windows File Explorer (MTP)</h3>
+                                <p>You can also use File Explorer by navigating to <code>This PC > Apple iPhone > Internal Storage > DCIM</code>. However, this method is significantly slower, doesn't convert HEIC files, and often shows cryptic folder names like <code>100APPLE</code>, <code>101APPLE</code>, etc.</p>
+
+                                <h3>Method 3: Windows Photos App</h3>
+                                <p>The built-in Photos app offers an import feature, but it can be unreliable with large libraries, doesn't allow you to choose the folder structure, and sometimes freezes mid-transfer.</p>
+
+                                <div class="faq-tip">
+                                    <i data-lucide="lightbulb" class="faq-tip-icon"></i>
+                                    <div><strong>Pro tip:</strong> iPhone Photo Transfer works in two modes: AMDS (Apple's native protocol, fastest) and MTP (Windows built-in, no drivers needed). You always have a fallback.</div>
+                                </div>
+
+                                <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="faq-inline-cta" target="_blank">
+                                    Try iPhone Photo Transfer free <i data-lucide="arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Q2 -->
+                    <article class="faq-article" id="q2">
+                        <div class="faq-article-card">
+                            <div class="faq-article-num">2</div>
+                            <h2>Why Are My iPhone Photos Not Showing on PC?</h2>
+                            <div class="faq-article-body">
+                                <p>This is one of the most common frustrations when connecting an iPhone to a Windows PC. There are several reasons your photos might not appear:</p>
+
+                                <h3>1. You haven't trusted the computer</h3>
+                                <p>When you plug your iPhone into a new computer for the first time, iOS will display a <strong>"Trust This Computer?"</strong> prompt on your iPhone screen. If you miss or dismiss it, Windows cannot access your photos. <strong>Solution:</strong> Unplug and replug the cable, then tap "Trust" on your iPhone and enter your passcode.</p>
+
+                                <h3>2. Apple drivers are missing or corrupted</h3>
+                                <p>Windows needs Apple Mobile Device Support (AMDS) drivers to communicate with your iPhone properly. If these drivers are missing, your iPhone may show up as an unknown device, or the DCIM folder may appear empty.</p>
+                                <p><strong>Solution:</strong> iPhone Photo Transfer can <strong>auto-install the correct Apple drivers</strong> with one click, without needing the full iTunes application.</p>
+
+                                <h3>3. iCloud Photos is enabled</h3>
+                                <p>If <strong>iCloud Photos</strong> is turned on with the "Optimize iPhone Storage" option, many of your photos are stored in the cloud, not on the device. Only low-resolution thumbnails are kept on your iPhone.</p>
+                                <p><strong>Solution:</strong> Go to <code>Settings > Photos</code> on your iPhone and select <strong>"Download and Keep Originals"</strong>. Wait for the downloads to complete, then try the transfer again.</p>
+
+                                <h3>4. The USB cable is damaged or incompatible</h3>
+                                <p>Low-quality or damaged cables can cause intermittent connections. Always use an <strong>Apple-certified (MFi)</strong> Lightning or USB-C cable.</p>
+
+                                <div class="faq-tip">
+                                    <i data-lucide="lightbulb" class="faq-tip-icon"></i>
+                                    <div><strong>Pro tip:</strong> iPhone Photo Transfer includes a built-in diagnostics tool that checks your connection, drivers, and device status. It tells you exactly what's wrong and how to fix it.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Q3 -->
+                    <article class="faq-article" id="q3">
+                        <div class="faq-article-card">
+                            <div class="faq-article-num">3</div>
+                            <h2>How to Convert HEIC Photos to JPG on Windows?</h2>
+                            <div class="faq-article-body">
+                                <p>Since iOS 11, iPhones save photos in <strong>HEIC format</strong> (High Efficiency Image Container) by default. While HEIC files are smaller and higher quality, many Windows applications, email clients, and websites don't support them natively.</p>
+
+                                <h3>What is HEIC?</h3>
+                                <p>HEIC (also called HEIF) is Apple's default photo format. A single HEIC image takes about <strong>50% less storage</strong> than an equivalent JPG, while maintaining the same visual quality. However, compatibility with Windows software is still limited.</p>
+
+                                <h3>Option 1: Automatic conversion during transfer</h3>
+                                <p><strong>iPhone Photo Transfer</strong> (Premium) can automatically convert all HEIC photos to JPG during the transfer process. No separate conversion tool needed, just check the "Convert HEIC to JPG" option before starting your transfer.</p>
+
+                                <h3>Option 2: Change iPhone settings</h3>
+                                <p>You can force your iPhone to shoot in JPG instead of HEIC: go to <code>Settings > Camera > Formats</code> and select <strong>"Most Compatible"</strong>. Note: this will use more storage on your iPhone going forward and won't convert existing HEIC photos.</p>
+
+                                <h3>Option 3: Online converters</h3>
+                                <p>There are free online tools to convert HEIC to JPG, but they require uploading your personal photos to a third-party server, which is a privacy concern for sensitive images.</p>
+
+                                <div class="faq-compare">
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">Method</span>
+                                        <span class="faq-compare-value">Privacy</span>
+                                        <span class="faq-compare-value">Batch</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">iPhone Photo Transfer</span>
+                                        <span class="faq-compare-value highlight">100% Offline</span>
+                                        <span class="faq-compare-value highlight">Unlimited</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">Online converters</span>
+                                        <span class="faq-compare-value">Upload to server</span>
+                                        <span class="faq-compare-value">Limited</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">iPhone settings change</span>
+                                        <span class="faq-compare-value">N/A</span>
+                                        <span class="faq-compare-value">Future only</span>
+                                    </div>
+                                </div>
+
+                                <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="faq-inline-cta" target="_blank">
+                                    Convert HEIC to JPG automatically <i data-lucide="arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Q4 -->
+                    <article class="faq-article" id="q4">
+                        <div class="faq-article-card">
+                            <div class="faq-article-num">4</div>
+                            <h2>Why Is iPhone Photo Transfer So Slow?</h2>
+                            <div class="faq-article-body">
+                                <p>If copying photos from your iPhone to PC is taking forever, there's usually a specific reason. Here are the most common causes and their fixes:</p>
+
+                                <h3>1. You're using MTP instead of AMDS</h3>
+                                <p>Windows File Explorer uses the <strong>MTP protocol</strong> (Media Transfer Protocol) to access iPhone photos. MTP can reach decent speeds (~30 MB/s) but it often stalls or freezes when transferring thousands of files, and provides no progress feedback.</p>
+                                <p><strong>Solution:</strong> Use a tool that supports <strong>Apple's native AMDS protocol</strong> (Apple Mobile Device Service). iPhone Photo Transfer uses AMDS by default for a <strong>more reliable and consistent</strong> transfer experience, with speeds up to 110 MB/s.</p>
+
+                                <h3>2. You're transferring over Wi-Fi instead of USB</h3>
+                                <p>Cloud-based transfer methods (iCloud, AirDrop, email) are limited by your internet speed, which is typically 5 to 50 Mbps. USB 3.0 can deliver <strong>up to 5 Gbps</strong>, hundreds of times faster.</p>
+
+                                <h3>3. Too many small files</h3>
+                                <p>Transferring thousands of small screenshots and thumbnails creates overhead. iPhone Photo Transfer optimizes batch transfers to minimize per-file overhead.</p>
+
+                                <h3>4. Background apps competing for resources</h3>
+                                <p>Close other resource-heavy apps during transfer. Also, make sure your iPhone isn't running a backup or system update simultaneously.</p>
+
+                                <div class="faq-compare">
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">Protocol</span>
+                                        <span class="faq-compare-value">Speed</span>
+                                        <span class="faq-compare-value">Reliability</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">AMDS over USB</span>
+                                        <span class="faq-compare-value highlight">Up to 110 MB/s</span>
+                                        <span class="faq-compare-value highlight">Very stable</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">MTP over USB</span>
+                                        <span class="faq-compare-value">~30 MB/s</span>
+                                        <span class="faq-compare-value">Can stall</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">iCloud download</span>
+                                        <span class="faq-compare-value">Depends on Wi-Fi</span>
+                                        <span class="faq-compare-value">Depends on connection</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Q5 -->
+                    <article class="faq-article" id="q5">
+                        <div class="faq-article-card">
+                            <div class="faq-article-num">5</div>
+                            <h2>iPhone DCIM Folder Empty: How to Fix It</h2>
+                            <div class="faq-article-body">
+                                <p>You plugged in your iPhone, opened File Explorer, navigated to <code>Apple iPhone > Internal Storage > DCIM</code>... and it's empty. This is a very common issue with several possible causes:</p>
+
+                                <h3>1. Trust prompt not accepted</h3>
+                                <p>The most frequent cause. Check your iPhone screen: you may need to tap <strong>"Trust"</strong> and enter your passcode. If the prompt didn't appear, disconnect and reconnect your iPhone.</p>
+
+                                <h3>2. iPhone is locked</h3>
+                                <p>Your iPhone must be <strong>unlocked</strong> for Windows to access the DCIM folder. Unlock it and wait a few seconds for Windows to refresh.</p>
+
+                                <h3>3. Apple drivers not installed</h3>
+                                <p>Without proper Apple drivers, Windows may only partially detect the iPhone. iPhone Photo Transfer includes a <strong>one-click driver installer</strong> that sets up the correct AMDS drivers without requiring a full iTunes installation.</p>
+
+                                <h3>4. iCloud Photo Library with optimized storage</h3>
+                                <p>If your photos are stored in iCloud with "Optimize iPhone Storage" enabled, the actual photo files may not be on the device. Download the originals first from <code>Settings > Photos > Download and Keep Originals</code>.</p>
+
+                                <h3>5. USB cable or port issue</h3>
+                                <p>Try a different USB port (preferably USB 3.0 on the back of your PC) and an Apple-certified cable.</p>
+
+                                <div class="faq-tip">
+                                    <i data-lucide="lightbulb" class="faq-tip-icon"></i>
+                                    <div><strong>Pro tip:</strong> iPhone Photo Transfer bypasses the DCIM folder entirely when using AMDS mode. Even if File Explorer can't see your photos, the app can access them directly through Apple's native protocol.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Q6 -->
+                    <article class="faq-article" id="q6">
+                        <div class="faq-article-card">
+                            <div class="faq-article-num">6</div>
+                            <h2>How to Transfer Photos from iPhone to PC Without iCloud?</h2>
+                            <div class="faq-article-body">
+                                <p>iCloud is convenient for Apple-to-Apple syncing, but it comes with significant limitations when transferring to Windows:</p>
+                                <ul>
+                                    <li><strong>5 GB free storage</strong> (most users exceed this quickly)</li>
+                                    <li>Requires a constant internet connection</li>
+                                    <li>The iCloud for Windows app is slow and buggy</li>
+                                    <li>Your private photos are stored on Apple's servers</li>
+                                    <li>Monthly subscription fees add up ($0.99 to $9.99/month for 50 GB to 2 TB)</li>
+                                </ul>
+
+                                <h3>The USB alternative</h3>
+                                <p><strong>iPhone Photo Transfer</strong> works 100% offline over USB. No internet connection, no cloud account, no subscription. Your photos go directly from your iPhone to your hard drive. Nothing is ever uploaded to any server.</p>
+                                <p>This is especially important for users who care about <strong>privacy</strong> or who have a slow/limited internet connection.</p>
+
+                                <div class="faq-compare">
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label"></span>
+                                        <span class="faq-compare-value">iCloud</span>
+                                        <span class="faq-compare-value highlight">USB Transfer</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">Internet required</span>
+                                        <span class="faq-compare-value">Yes</span>
+                                        <span class="faq-compare-value highlight">No</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">Monthly cost</span>
+                                        <span class="faq-compare-value">$0.99 to $9.99</span>
+                                        <span class="faq-compare-value highlight">€0 (free trial)</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">Privacy</span>
+                                        <span class="faq-compare-value">Cloud storage</span>
+                                        <span class="faq-compare-value highlight">100% offline</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">Speed</span>
+                                        <span class="faq-compare-value">Depends on Wi-Fi</span>
+                                        <span class="faq-compare-value highlight">Up to 110 MB/s</span>
+                                    </div>
+                                </div>
+
+                                <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="faq-inline-cta" target="_blank">
+                                    Transfer photos without iCloud <i data-lucide="arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Q7 -->
+                    <article class="faq-article" id="q7">
+                        <div class="faq-article-card">
+                            <div class="faq-article-num">7</div>
+                            <h2>How to Backup All iPhone Photos to a Windows PC?</h2>
+                            <div class="faq-article-body">
+                                <p>Having a local backup of your iPhone photos on your PC is one of the smartest things you can do. Cloud services can fail, accounts can be compromised, and storage plans can expire. Here's how to create a reliable local backup:</p>
+
+                                <h3>Step 1: Connect your iPhone</h3>
+                                <p>Use an Apple-certified USB cable to plug your iPhone into your Windows PC. Make sure to tap <strong>"Trust"</strong> on your iPhone when prompted.</p>
+
+                                <h3>Step 2: Choose your backup location</h3>
+                                <p>Pick a folder on your PC (or an external hard drive) where you want to store your photo library. An external drive is recommended for long-term backups.</p>
+
+                                <h3>Step 3: Transfer everything</h3>
+                                <p>With iPhone Photo Transfer, select both "Photos" and "Videos", choose your preferred organization method (by month or year), and click <strong>Transfer</strong>. The app will copy everything, including Live Photos and screenshots.</p>
+
+                                <h3>Step 4: Enable duplicate detection</h3>
+                                <p>Turn on <strong>Smart Duplicate Detection</strong> so future backups only copy new files. This means you can run the backup regularly without worrying about wasting space on files you've already transferred.</p>
+
+                                <div class="faq-tip">
+                                    <i data-lucide="lightbulb" class="faq-tip-icon"></i>
+                                    <div><strong>Pro tip:</strong> Run a monthly backup routine. Plug in your iPhone, open iPhone Photo Transfer, and let duplicate detection handle the rest. Only new photos get copied.</div>
+                                </div>
+
+                                <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="faq-inline-cta" target="_blank">
+                                    Start your first backup <i data-lucide="arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Q8 -->
+                    <article class="faq-article" id="q8">
+                        <div class="faq-article-card">
+                            <div class="faq-article-num">8</div>
+                            <h2>What Is the Difference Between MTP and AMDS for iPhone?</h2>
+                            <div class="faq-article-body">
+                                <p>When you connect an iPhone to a Windows PC, two protocols can be used to access your photos. Understanding the difference helps you choose the fastest method.</p>
+
+                                <h3>MTP (Media Transfer Protocol)</h3>
+                                <p>MTP is a <strong>standard Windows protocol</strong> for accessing media files on connected devices. It's what File Explorer uses when you open <code>This PC > Apple iPhone > DCIM</code>. It works without any additional drivers, but it has significant limitations:</p>
+                                <ul>
+                                    <li>Can stall or freeze when transferring large batches</li>
+                                    <li>Files are transferred one at a time</li>
+                                    <li>No HEIC conversion support</li>
+                                    <li>Cryptic folder names (100APPLE, 101APPLE...)</li>
+                                    <li>Can stall or freeze with large libraries</li>
+                                </ul>
+
+                                <h3>AMDS (Apple Mobile Device Service)</h3>
+                                <p>AMDS is <strong>Apple's proprietary protocol</strong>, the same one iTunes uses internally. It provides a direct, low-level connection to the iPhone's file system:</p>
+                                <ul>
+                                    <li>Transfer speeds up to 110 MB/s</li>
+                                    <li>Batch transfer support</li>
+                                    <li>Access to photo metadata (dates, locations)</li>
+                                    <li>Reliable connection even with large libraries</li>
+                                    <li>Required: Apple USB drivers (installed automatically by iPhone Photo Transfer)</li>
+                                </ul>
+
+                                <div class="faq-compare">
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">Feature</span>
+                                        <span class="faq-compare-value">MTP</span>
+                                        <span class="faq-compare-value highlight">AMDS</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">Speed</span>
+                                        <span class="faq-compare-value">~30 MB/s</span>
+                                        <span class="faq-compare-value highlight">Up to 110 MB/s</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">Drivers needed</span>
+                                        <span class="faq-compare-value">None</span>
+                                        <span class="faq-compare-value">Apple USB drivers</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">Reliability</span>
+                                        <span class="faq-compare-value">Can stall</span>
+                                        <span class="faq-compare-value highlight">Rock solid</span>
+                                    </div>
+                                    <div class="faq-compare-row">
+                                        <span class="faq-compare-label">Batch support</span>
+                                        <span class="faq-compare-value">No</span>
+                                        <span class="faq-compare-value highlight">Yes</span>
+                                    </div>
+                                </div>
+
+                                <p>iPhone Photo Transfer <strong>automatically uses AMDS</strong> when drivers are available, and falls back to MTP if they're not. You get the best of both worlds.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Q9 -->
+                    <article class="faq-article" id="q9">
+                        <div class="faq-article-card">
+                            <div class="faq-article-num">9</div>
+                            <h2>How to Organize iPhone Photos by Date on PC?</h2>
+                            <div class="faq-article-body">
+                                <p>When you copy photos from your iPhone using File Explorer, they end up in cryptic folders like <code>100APPLE</code>, <code>101APPLE</code>, <code>102APPLE</code>... with filenames like <code>IMG_0001.HEIC</code>. Finding a specific photo becomes a nightmare.</p>
+
+                                <h3>The auto-organize solution</h3>
+                                <p>iPhone Photo Transfer automatically organizes your photos into clean, human-readable folders based on the date they were taken:</p>
+
+                                <p><strong>Organize by month:</strong></p>
+                                <ul>
+                                    <li><code>Photos/2026-01 January/</code></li>
+                                    <li><code>Photos/2026-02 February/</code></li>
+                                    <li><code>Photos/2025-12 December/</code></li>
+                                </ul>
+
+                                <p><strong>Organize by year:</strong></p>
+                                <ul>
+                                    <li><code>Photos/2026/</code></li>
+                                    <li><code>Photos/2025/</code></li>
+                                    <li><code>Photos/2024/</code></li>
+                                </ul>
+
+                                <p>This structure makes it easy to browse your photos chronologically and find exactly what you're looking for. The organization is applied automatically during transfer, no manual sorting needed.</p>
+
+                                <div class="faq-tip">
+                                    <i data-lucide="lightbulb" class="faq-tip-icon"></i>
+                                    <div><strong>Pro tip:</strong> If you combine date-based organization with duplicate detection, you can run regular backups that keep your photo library perfectly organized without ever duplicating a single file.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Q10 -->
+                    <article class="faq-article" id="q10">
+                        <div class="faq-article-card">
+                            <div class="faq-article-num">10</div>
+                            <h2>Can I Transfer iPhone Photos Over USB Without Any Software?</h2>
+                            <div class="faq-article-body">
+                                <p><strong>Yes, but with significant limitations.</strong> Windows 10 and 11 can access iPhone photos through File Explorer using the MTP protocol. Here's what you need to know:</p>
+
+                                <h3>What works without software</h3>
+                                <ul>
+                                    <li>Connect iPhone via USB cable</li>
+                                    <li>Trust the computer on your iPhone</li>
+                                    <li>Open <code>This PC > Apple iPhone > Internal Storage > DCIM</code></li>
+                                    <li>Manually copy files and folders</li>
+                                </ul>
+
+                                <h3>What doesn't work without software</h3>
+                                <ul>
+                                    <li><strong>HEIC conversion:</strong> you'll get HEIC files that many Windows apps can't open</li>
+                                    <li><strong>Duplicate detection:</strong> you'll have to remember which photos you already copied</li>
+                                    <li><strong>Auto-organization:</strong> photos stay in cryptic Apple folder structure</li>
+                                    <li><strong>Reliability:</strong> MTP can stall mid-transfer with large batches</li>
+                                    <li><strong>No progress info:</strong> File Explorer doesn't show detailed transfer progress</li>
+                                    <li><strong>Video transfer:</strong> large video files frequently fail over MTP</li>
+                                </ul>
+
+                                <p>For occasional transfers of a few photos, File Explorer works fine. But if you have hundreds or thousands of photos to transfer, a dedicated tool saves hours of time and prevents data loss from failed transfers.</p>
+
+                                <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="faq-inline-cta" target="_blank">
+                                    Download iPhone Photo Transfer free <i data-lucide="arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BOTTOM CTA ========== -->
+    <section class="faq-cta-banner">
+        <div class="container">
+            <h2>Ready to transfer your photos?</h2>
+            <p>Stop wrestling with File Explorer. Transfer all your iPhone photos and videos to your PC in one click.</p>
+            <a href="https://apps.microsoft.com/detail/9MXHDC3WDQSX" class="btn btn-primary btn-lg btn-glow" target="_blank">
+                <svg class="btn-win-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+                Download from Microsoft Store
+                <span class="btn-badge">Free Trial</span>
+            </a>
+            <div class="faq-cta-sub">Free trial · No credit card · No subscription · €6.99 one-time for Premium</div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img src="../assets/images/logo.png" alt="" class="footer-logo">
+                    <span>iPhone Photo Transfer</span>
+                </div>
+                <div class="footer-links">
+                    <a href="../#features">Features</a>
+                    <a href="../#pricing">Pricing</a>
+                    <a href="./">FAQ</a>
+                    <a href="https://eytan55.github.io/textlater.github.io/privacy-policy-en.html" target="_blank">Privacy</a>
+                    <a href="https://twitter.com/iloveappsio" target="_blank">Twitter</a>
+                    <a href="https://discord.gg/UhutX6ju6h" target="_blank">Discord</a>
+                </div>
+                <div class="footer-copy">
+                    &copy; 2026 <a href="https://twitter.com/iloveappsio" target="_blank">I Love Apps</a>. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== FAQ SCHEMA (JSON-LD) ========== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How to transfer photos from iPhone to PC without iTunes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You don't need iTunes to transfer photos. Use a dedicated tool like iPhone Photo Transfer which connects via USB, auto-installs Apple drivers, and transfers all photos and videos at maximum speed. Alternatively, you can use Windows File Explorer (slower) or the Photos app (less reliable)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why are my iPhone photos not showing on PC?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The most common causes are: not tapping 'Trust This Computer' on your iPhone, missing Apple drivers, iCloud Photos with optimized storage enabled, or a damaged USB cable. iPhone Photo Transfer includes a built-in diagnostics tool to identify and fix these issues."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How to convert HEIC photos to JPG on Windows?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "iPhone Photo Transfer (Premium) automatically converts HEIC photos to JPG during transfer. No separate tool needed. Alternatively, you can change your iPhone camera settings to 'Most Compatible' format, or use online converters (though these require uploading your photos to a server)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why is iPhone photo transfer so slow?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Common causes include using MTP protocol (which can stall with large libraries), transferring over Wi-Fi instead of USB, or having too many small files. iPhone Photo Transfer uses Apple's native AMDS protocol for a faster, more reliable transfer at up to 110 MB/s."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "iPhone DCIM folder empty: how to fix it?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Common fixes: 1) Unlock your iPhone and tap 'Trust' when prompted. 2) Install Apple USB drivers (iPhone Photo Transfer does this automatically). 3) If iCloud Photos with optimized storage is enabled, download originals first. 4) Try a different USB cable and port."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How to transfer photos from iPhone to PC without iCloud?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use a USB transfer tool like iPhone Photo Transfer. It works 100% offline: no internet, no cloud, no account needed. Your photos go directly from iPhone to PC via USB cable. This is faster, more private, and doesn't require a monthly subscription."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How to backup all iPhone photos to a Windows PC?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Connect your iPhone via USB, open iPhone Photo Transfer, select both Photos and Videos, choose an organization method (by month or year), and click Transfer. Enable Smart Duplicate Detection for future backups so only new files are copied."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between MTP and AMDS for iPhone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "MTP is Windows' standard media protocol (~30 MB/s, no drivers needed, can stall with large libraries). AMDS is Apple's native protocol (up to 110 MB/s, needs Apple drivers, very reliable). iPhone Photo Transfer auto-uses AMDS when available and falls back to MTP."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How to organize iPhone photos by date on PC?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "iPhone Photo Transfer automatically sorts photos into folders by month (e.g., '2026-01 January') or year during transfer. No manual sorting needed. Combined with duplicate detection, regular backups keep your library perfectly organized."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I transfer iPhone photos over USB without any software?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, via File Explorer (This PC > Apple iPhone > DCIM), but with limitations: no HEIC conversion, no duplicate detection, no auto-organization, slower MTP speeds, and unreliable with large libraries. A dedicated tool is recommended for 50+ photos."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "I Love Apps",
+        "url": "https://textlater.app",
+        "logo": "https://textlater.app/assets/images/logoIloveApps.png",
+        "description": "Premium iOS applications for iPhone users",
+        "sameAs": ["https://twitter.com/iloveappsio"]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "iPhone Photo Transfer",
+                "item": "https://iloveapps.io/iphone-photo-transfer/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "FAQ",
+                "item": "https://iloveapps.io/iphone-photo-transfer/faq/"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Minimal inline JS for TOC highlight & Lucide -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Init Lucide icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            // TOC active state on scroll
+            const tocLinks = document.querySelectorAll('.faq-toc-list a');
+            const articles = document.querySelectorAll('.faq-article');
+
+            if (articles.length && tocLinks.length) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const id = entry.target.id;
+                            tocLinks.forEach(link => {
+                                link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                            });
+                        }
+                    });
+                }, {
+                    rootMargin: '-100px 0px -60% 0px',
+                    threshold: 0
+                });
+
+                articles.forEach(article => observer.observe(article));
+            }
+
+            // Smooth scroll for TOC links
+            tocLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(link.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -750,7 +750,7 @@ section { padding: 100px 0; }
 }
 
 .speed-fill::after {
-  content: '10x';
+  content: 'Max';
   position: absolute;
   right: 12px;
   top: 50%;
