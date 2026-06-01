@@ -1,8 +1,24 @@
 // I Love Apps - Modern JavaScript (2025)
 // Clean, efficient, perfectly optimized
 
+// Global cached DOM elements and variables for layout performance
+let navElement;
+let navHeight = 0;
+let heroHeadingElement;
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Lucide icons
+    // Cache DOM references
+    navElement = document.querySelector('.nav');
+    if (navElement) {
+        navHeight = navElement.offsetHeight;
+    }
+    heroHeadingElement = document.querySelector('.hero-heading');
+
+    // Run initial screen size adjustments using cached elements
+    adjustForScreenSize();
+    updateGlassEffects();
+
+    // Initialize Lucide icons (runs after defer script load)
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
@@ -15,6 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
     initHeroAnimations();
     initFloatingElements();
     initAnalytics();
+
+    // Staggered hero entrance animations
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+        const heroElements = document.querySelectorAll('.hero-badge, .hero-heading, .hero-description');
+        heroElements.forEach((el, index) => {
+            el.style.animation = `fadeInUp 0.8s ease ${index * 0.2}s both`;
+        });
+    }, 100);
 
     console.log('❤️ I Love Apps - Ready to make your life easier!');
 });
@@ -31,7 +56,7 @@ function initSmoothScroll() {
             const targetElement = document.getElementById(targetId);
             
             if (targetElement) {
-                const navHeight = document.querySelector('.nav').offsetHeight;
+                // Use cached navHeight to avoid layout thrashing
                 const targetPosition = targetElement.offsetTop - navHeight - 20;
                 
                 window.scrollTo({
@@ -213,34 +238,41 @@ function initFloatingElements() {
 
 // Enhanced scroll effects with glass morphism
 function initScrollEffects() {
-    const nav = document.querySelector('.nav');
+    if (!navElement) return;
     let lastScrollY = window.scrollY;
+    let ticking = false;
     
-    window.addEventListener('scroll', throttle(() => {
-        const currentScrollY = window.scrollY;
-        
-        // Enhanced navigation effects with better glass morphism
-        if (currentScrollY > 50) {
-            nav.style.background = 'rgba(255, 255, 255, 0.85)';
-            nav.style.backdropFilter = 'blur(25px)';
-            nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
-            nav.style.borderBottom = '1px solid rgba(239, 68, 68, 0.1)';
-        } else {
-            nav.style.background = 'rgba(255, 255, 255, 0.7)';
-            nav.style.backdropFilter = 'blur(20px)';
-            nav.style.boxShadow = 'none';
-            nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.3)';
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const currentScrollY = window.scrollY;
+                
+                // Enhanced navigation effects with better glass morphism
+                if (currentScrollY > 50) {
+                    navElement.style.background = 'rgba(255, 255, 255, 0.85)';
+                    navElement.style.backdropFilter = 'blur(25px)';
+                    navElement.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+                    navElement.style.borderBottom = '1px solid rgba(239, 68, 68, 0.1)';
+                } else {
+                    navElement.style.background = 'rgba(255, 255, 255, 0.7)';
+                    navElement.style.backdropFilter = 'blur(20px)';
+                    navElement.style.boxShadow = 'none';
+                    navElement.style.borderBottom = '1px solid rgba(255, 255, 255, 0.3)';
+                }
+                
+                // Smooth hide/show navigation
+                if (currentScrollY > lastScrollY && currentScrollY > 150) {
+                    navElement.style.transform = 'translateY(-100%)';
+                } else {
+                    navElement.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollY = currentScrollY;
+                ticking = false;
+            });
+            ticking = true;
         }
-        
-        // Smooth hide/show navigation
-        if (currentScrollY > lastScrollY && currentScrollY > 150) {
-            nav.style.transform = 'translateY(-100%)';
-        } else {
-            nav.style.transform = 'translateY(0)';
-        }
-        
-        lastScrollY = currentScrollY;
-    }, 16));
+    });
     
     // Enhanced intersection observer with staggered animations
     const observerOptions = {
@@ -434,17 +466,19 @@ window.addEventListener('resize', function() {
 });
 
 function adjustForScreenSize() {
-    const heroHeading = document.querySelector('.hero-heading');
+    if (navElement) {
+        navHeight = navElement.offsetHeight; // Recalculate height on resize
+    }
     const isMobile = window.innerWidth < 768;
     const isSmallMobile = window.innerWidth < 480;
     
-    if (heroHeading) {
+    if (heroHeadingElement) {
         if (isSmallMobile) {
-            heroHeading.style.fontSize = 'clamp(28px, 8vw, 32px)';
+            heroHeadingElement.style.fontSize = 'clamp(28px, 8vw, 32px)';
         } else if (isMobile) {
-            heroHeading.style.fontSize = 'clamp(32px, 6vw, 38px)';
+            heroHeadingElement.style.fontSize = 'clamp(32px, 6vw, 38px)';
         } else {
-            heroHeading.style.fontSize = '52px';
+            heroHeadingElement.style.fontSize = '52px';
         }
     }
     
@@ -540,19 +574,5 @@ window.addEventListener('error', function(e) {
     });
 });
 
-// Enhanced initialization
-document.addEventListener('DOMContentLoaded', function() {
-    adjustForScreenSize();
-    updateGlassEffects();
-    
-    // Add loading complete class with delay for smooth entrance
-    setTimeout(() => {
-        document.body.classList.add('loaded');
-        
-        // Trigger entrance animations
-        const heroElements = document.querySelectorAll('.hero-badge, .hero-heading, .hero-description');
-        heroElements.forEach((el, index) => {
-            el.style.animation = `fadeInUp 0.8s ease ${index * 0.2}s both`;
-        });
-    }, 100);
-});
+// Consolidated event initialization directly inside script.js DOMContentLoaded listener
+
